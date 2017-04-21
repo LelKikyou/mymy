@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="lib/css/swiper.min.css">
+<link rel="stylesheet" href="lib/css/animate.min.css">
+<!-- Demo styles -->
+<style>
+    /*音频*/
+    .musicBtn {
+        position: fixed;
+        z-index: 20;
+        top: 0.2rem;
+        right: 0.2rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        overflow: hidden;
+        animation: mymove 2s infinite linear;
+    }
+
+    .musicBtn img {
+        position: absolute;
+        top: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .btnOff {
+        display: none;
+    }
+
+    @-webkit-keyframes mymove {
+        to {
+            transform: rotate(360deg)
+        }
+    }
+
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        background: #fff;
+
+        /* Center slide text verticall*/
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    /*第一个*/
+    .slide1 {
+        background: url(images/indexBuilding.png) #3e88f1 bottom no-repeat;
+        background-size: contain;
+        position: relative;
+    }
+
+    .slide1 img {
+        position: absolute;
+    }
+
+    .slide1 img:nth-child(1) {
+        width: 5.84rem;
+        height: 3.81rem;
+        top: 10%
+    }
+
+    .slide1 img:nth-child(2) {
+        width: 10.05rem;
+        height: 16.41rem;
+        top: 0;
+    }
+
+    .slide1 img:nth-child(3) {
+        width: 1.54rem;
+        height: 2.35rem;
+        top: 11%;
+        left: 10%;
+    }
+
+    .slide1 img:nth-child(4) {
+        width: 1.17rem;
+        height: 1.81rem;
+        top: 22%;
+        left: 63%
+    }
+
+    .slide1 img:nth-child(5) {
+        top: 8%;
+        width: 9.02rem;
+        height: 11.28rem;
+    }
+
+    .slide1 img:nth-child(6) {
+        top: 10%;
+        width: 10.05rem;
+        height: 16.41rem;
+    }
+
+    .slide1 img:nth-child(7) {
+        width: 8.3rem;
+        height: 4.38rem;
+    }
+
+    /*第二张*/
+    .slide2 {
+        background: url(images/wasBg.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .slide2 img {
+        position: absolute;
+    }
+
+    .slide2 img:nth-child(1) {
+        width: 6.72rem;
+        height: 10.4rem;
+        top: -10.4rem;
+        left: 16.77rem;
+    }
+
+    .slide2 img:nth-child(2) {
+        width: 5.23rem;
+        height: 1.30rem;
+        top: 38%;
+    }
+
+    .slide2 img:nth-child(3) {
+        width: 5.23rem;
+        height: 1.3rem;
+        top: 52%;
+    }
+
+    /*第三个*/
+    .slide3 {
+        background: url(images/earlyBg.jpg) no-repeat #02162e;
+        background-size: contain;
+        position: relative;
+    }
+
+    .slide3 img {
+        position: absolute;
+    }
+
+    .slide3 img:nth-child(1) {
+        width: 10.05rem;
+        height: 14.36rem;
+        bottom: 0;
+    }
+
+    .slide3 img:nth-child(2) {
+        width: 2.53rem;
+        height: 0.90rem;
+        left: 0;
+        top: 7%;
+    }
+
+    .slide3 img:nth-child(3) {
+        width: 10.05rem;
+        height: 11.42rem;
+        bottom: 0;
+    }
+
+    .slide3 img:nth-child(4) {
+        width: 6.99rem;
+        height: 5.14rem;
+        left: 0;
+        bottom: 0;
+    }
+
+    .slide3 img:nth-child(5) {
+        width: 3.69rem;
+        height: 0.92rem;
+        left: 0;
+        top: 7%;
+    }
+
+    .slide3 img:nth-child(6) {
+        width: 2.31rem;
+        height: 2.31rem;
+        left: 10.05rem;
+        bottom: 7%;
+    }
+
+    .slide3 img:nth-child(7) {
+        width: 10.05rem;
+        height: 17.88rem;
+        top: 0;
+        left: 0;
+    }
+
+    .slide3 img:nth-child(8) {
+        width: 2.8rem;
+        height: 10.05rem;
+        right: 0;
+        bottom: 0;
+    }
+
+    .slide3 img:nth-child(9) {
+        width: 3.01rem;
+        height: 3.41rem;
+        right: 0.51rem;
+        bottom: 8.92rem;
+    }
+
+    .slide3 img:nth-child(10) {
+        width: 1.15rem;
+        height: 0.53rem;
+        left: 15%;
+        top: 29%;
+    }
+
+    .slide3 img:nth-child(11) {
+        width: 2.18rem;
+        height: 0.87rem;
+        left: 15%;
+        top: 34%;
+    }
+
+    .slide3 img:nth-child(12) {
+        width: 2.18rem;
+        height: 0.87rem;
+        left: 15%;
+        top: 40%;
+    }
+
+    .slide3 img:nth-child(13) {
+        width: 2.18rem;
+        height: 0.87rem;
+        left: 15%;
+        top: 46%;
+    }
+
+    .slide3 img:nth-child(14) {
+        width: 4.37rem;
+        height: 1.73rem;
+        bottom: 13%;
+    }
+
+    /*第四张*/
+    .slide4 {
+        background: url(images/lightOffBg.jpg) no-repeat #02162e;
+        background-size: cover;
+        position: relative;
+    }
+
+    .slide4 img {
+        position: absolute;
+    }
+
+    .slide4 img:nth-child(1) {
+        width: 3.49rem;
+        height: 14.83rem;
+        left: 0;
+        bottom: 0;
+    }
+
+    .slide4 img:nth-child(2) {
+        width: 1.98rem;
+        height: 15.69rem;
+        right: 0;
+        bottom: 0;
+    }
+
+    .slide4 img:nth-child(3) {
+        width: 5.2rem;
+        height: 1.58rem;
+        right: 0;
+        top: 5%;
+    }
+
+    .slide4 img:nth-child(4) {
+        width: 4.56rem;
+        height: 0.4rem;
+        top: 30%;
+    }
+
+    /*第5张*/
+    .slide5 {
+        background: url(images/aboutBg.jpg) no-repeat bottom #62880e;
+        background-size: contain;
+        position: relative;
+    }
+
+    .slide5 img {
+        position: absolute;
+    }
+
+    .slide5 img:nth-child(1) {
+        width: 10.05rem;
+        height: 5.43rem;
+        top: 0;
+    }
+
+    .slide5 img:nth-child(2) {
+        width: 7.64rem;
+        height: 3.16rem;
+        top: 55%;
+    }
+
+    .slide5 img:nth-child(3) {
+        width: 6.4rem;
+        height: 5.30rem;
+        top: 20%;
+        right: 5%;
+    }
+
+    .slide5 img:nth-child(4) {
+        width: 5.12rem;
+        height: 2.04rem;
+        top: 57%;
+    }
+
+    /*第六张*/
+    .slide6 {
+        background: url(images/runBg.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .slide6 img {
+        position: absolute;
+    }
+
+    .slide6 img:nth-child(1) {
+        width: 7.64rem;
+        height: 3.17rem;
+        top: 50%;
+    }
+
+    .slide6 img:nth-child(2) {
+        width: 5.12rem;
+        height: 2.05rem;
+        top: 53%;
+    }
+
+    .slide6 img:nth-child(3) {
+        width: 3.03rem;
+        height: 5.33rem;
+        top: 17%;
+        left: 17%;
+    }
+
+    /*第七张*/
+    .slide7 {
+        background: #53c98f;
+        position: relative;
+    }
+
+    .slide7 img {
+        position: absolute;
+    }
+
+    .slide7 img:nth-child(1) {
+        width: 8.72rem;
+        height: 9.74rem;
+        top: 2%;
+    }
+
+    .slide7 img:nth-child(2) {
+        width: 8rem;
+        height: 3.32rem;
+        top: 54%;
+    }
+
+    .slide7 img:nth-child(3) {
+        width: 5.66rem;
+        height: 2.31rem;
+        top: 56%;
+    }
+
+    .slide7 img:nth-child(4) {
+        width: 4.77rem;
+        height: 6.27rem;
+        top: 5%;
+    }
+
+    /*第八张*/
+    .slide8 {
+        background: #6cf6b2;
+        position: relative;
+    }
+
+    .slide8 img {
+        position: absolute;
+    }
+
+    .slide8 div:nth-of-type(1) {
+        width: 86%;
+        height: 68%;
+        background: #e64159;
+        border: 30px solid #f76479;
+        border-bottom-width: 50px;
+        border-radius: 5%;
+        position: absolute;
+        top: 13%;
+    }
+
+    .slide8 div:nth-of-type(1) p {
+        text-indent: 0.89em;
+        font-size: 0.445em;
+        color: white;
+    }
+
+    .slide8 img:nth-of-type(1) {
+        width: 23%;
+        top: 6%;
+        left: 7%;
+    }
+
+    .slide8 img:nth-of-type(2) {
+        width: 50%;
+        top: 8%;
+        left: 29%;
+    }
+
+    .slide8 img:nth-of-type(3) {
+        width: 33%;
+        bottom: 0;
+        right: 0;
+    }
+
+    .slide8 img:nth-of-type(4) {
+        width: 95%;
+        top: 12%;
+    }
+
+    .slide8 img:nth-of-type(5) {
+        width: 11%;
+        left: 57%;
+        top: 75%;
+    }
+
+    .slide8 div:nth-of-type(2) {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*第九张*/
+    .slide9 {
+        background: #347de5;
+        background-size: cover;
+        position: relative;
+    }
+
+    .slide9 img {
+        position: absolute;
+    }
+
+    .slide9 img:nth-child(1) {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide9 img:nth-child(2) {
+        width: 53%;
+        top: 8%;
+    }
+
+    .slide9 img:nth-child(3) {
+        width: 57%;
+        top: 18%;
+    }
+
+    .slide9 img:nth-child(4) {
+        width: 61%;
+        top: 32%;
+    }
+
+    .slide9 img:nth-child(5) {
+        width: 33%;
+        top: 45%;
+    }
+
+    .slide9 img:nth-child(6) {
+        width: 91%;
+        top: 10%
+    }
+
+    .slide9 img:nth-child(7) {
+        width: 61%;
+        top: 50%
+    }
+
+    .slide9 img:nth-child(8) {
+        width: 35%;
+        bottom: 2%;
+    }
+</style>
+<body>
+<div class="musicBtn">
+    <img src="images/musicBtn.png" class="btnOn">
+    <img src="images/musicBtnOff.png" class="btnOff">
+</div>
+<audio src="images/music.mp3" class="audio"></audio>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slide1">
+            <img src="images/indexTxt.png">
+            <img src="images/indexStars.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s"
+                 swiper-animate-delay="0.5s">
+            <img src="images/indexFlowers01.png" class="ani" swiper-animate-effect="zoomIn"
+                 swiper-animate-duration="1.5s"
+                 swiper-animate-delay="0.5s">
+            <img src="images/indexFlowers02.png" class="ani" swiper-animate-effect="zoomIn"
+                 swiper-animate-duration="1.5s"
+                 swiper-animate-delay="0.5s">
+            <img src="images/endCloudys.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s"
+                 swiper-animate-delay="0.5s">
+            <img src="images/indexElements.png" class="ani" swiper-animate-effect="zoomIn"
+                 swiper-animate-duration="1.5s"
+                 swiper-animate-delay="0.5s">
+            <img src="images/indexFlight.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s"
+                 swiper-animate-delay="1s">
+        </div>
+        <div class="swiper-slide slide2">
+            <img src="images/wasStar.png" class="ani" swiper-animate-effect="huadong" swiper-animate-duration="1s">
+            <img src="images/wasFarm.png" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s">
+            <img src="images/wasIT.png" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.5s">
+        </div>
+        <div class="swiper-slide slide3">
+            <img src="images/earlyBuilding.png" class="ani" swiper-animate-effect="fadeInOut"
+                 swiper-animate-duration="3.5s"
+                 swiper-animate-delay="0.5s">
+            <img src="images/earlyTitle.png" class="ani" swiper-animate-effect="fadeInOut" swiper-animate-duration="3s"
+                 swiper-animate-delay="1s">
+            <img src="images/lastBusStation.png" class="ani" swiper-animate-effect="fadeInOut"
+                 swiper-animate-duration="6s"
+                 swiper-animate-delay="3s">
+            <img src="images/bus.png" class="ani" swiper-animate-effect="bounceInOutLeft" swiper-animate-duration="2.5s"
+                 swiper-animate-delay="3.2s">
+            <img src="images/lastBusTitle.png" class="ani" swiper-animate-effect="fadeInOut"
+                 swiper-animate-duration="5s"
+                 swiper-animate-delay="4s">
+            <img src="images/lastBusAvatar.png" class="ani" swiper-animate-effect="bounceInLeftOut"
+                 swiper-animate-duration="4.5s"
+                 swiper-animate-delay="4.5s">
+            <img src="images/myTeamBg.jpg" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+                 swiper-animate-delay="7.5s">
+            <img src="images/myTeamWall.png" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s"
+                 swiper-animate-delay="8.7s">
+            <img src="images/myTeamAvatar.png" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s"
+                 swiper-animate-delay="9.3s">
+            <img src="images/myTeamTxt.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="9.5s">
+            <img src="images/myTeamTxt01.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="9.8s">
+            <img src="images/myTeamTxt02.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="10.1s">
+            <img src="images/myTeamTxt03.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="10.4s">
+            <img src="images/myteamWhereTxt.png" class="ani" swiper-animate-effect="zoomIn"
+                 swiper-animate-duration="0.5s"
+                 swiper-animate-delay="10.7s">
+        </div>
+        <div class="swiper-slide slide4">
+            <img src="images/lightOff.png">
+            <img src="images/cornerWall.png">
+            <img src="images/cornerTitle.png" class="ani" swiper-animate-effect="bounceInDown"
+                 swiper-animate-duration="0.5s">
+            <img src="images/clickGuide.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="0.7s">
+        </div>
+        <div class="swiper-slide slide5">
+            <img src="images/footCity.jpg" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+                 swiper-animate-delay="0.7s">
+            <img src="images/footTa.png" class="ani" swiper-animate-effect="bounceLeftInOut"
+                 swiper-animate-duration="2.5s"
+                 swiper-animate-delay="0.1s">
+            <img src="images/footAvatar.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="0.7s">
+            <img src="images/footTx.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="2.5s">
+        </div>
+        <div class="swiper-slide slide6">
+            <img src="images/runTa.png" class="ani" swiper-animate-effect="bounceLeftInOut"
+                 swiper-animate-duration="2.5s"
+                 swiper-animate-delay="0.1s">
+            <img src="images/runTxt.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="2.5s">
+            <img src="images/runAvatar.png" class="ani" swiper-animate-effect="zoom_leftIn" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.6s">
+        </div>
+        <div class="swiper-slide slide7">
+            <img src="images/salaryBg.png" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s"
+                 swiper-animate-delay="0.5s">
+            <img src="images/salaryTa.png" class="ani" swiper-animate-effect="bounceLeftInOut"
+                 swiper-animate-duration="2s"
+                 swiper-animate-delay="1s">
+            <img src="images/salaryTxt.png" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="3s"
+                 swiper-animate-delay="3s">
+            <img src="images/salaryAvatar.png" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+                 swiper-animate-delay="1.5s">
+        </div>
+        <div class="swiper-slide slide8">
+            <img src="images/introFlowers.png">
+            <div class="wenzi">
+                <p>&nbsp;&nbsp;招商银行是世界500强企业，也是我国第一家完全有企业法人持股的股份制商业银行。</p>
+                <p>
+                    &nbsp;&nbsp;招银网络科技（简称招银科技）是招商银行的全资子公司，致力于为招商银行全球化发展提供强有力的软件开发及技术支持。公司以成为中国银行业最强大脑为己任，在彼此信任和尊重的基础上，追求高标准的交付和价值创造。现有深圳、杭州两家分支机构，共同担负着招商银行电子信息化的重任。
+                </p>
+                <p>&nbsp;&nbsp;这里是中国最具活力的银行,这里是中国最优秀的金融IT团队之一。如果您足够优秀，那么这里将会是您智慧闪光、价值实现和梦想腾飞的舞台，我们热忱期待您的加盟。</p>
+            </div>
+            <img src="images/introLogo.png">
+            <img src="images/introAvatar.png">
+            <img src="images/introCloudy.png">
+            <img src="images/introStar.png">
+        </div>
+        <div class="swiper-slide slide9">
+            <img src="images/endBg.png">
+            <img src="images/endLogo.png" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="0.3s">
+            <img src="images/endTxt.png" class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.7s"
+                 swiper-animate-delay="0.6s">
+            <img src="images/endMail.png" class="ani" swiper-animate-effect="bounceInDown"
+                 swiper-animate-duration="0.7s"
+                 swiper-animate-delay="0.8s">
+            <img src="images/endClickGuide.png" class="ani" swiper-animate-effect="bounceInDown"
+                 swiper-animate-duration="0.7s"
+                 swiper-animate-delay="1s">
+            <img src="images/endCloudys.png">
+            <img src="images/endAvatar.png" class="ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.8s">
+            <img src="images/endBottomTxt.png" class="ani" swiper-animate-effect="zoomInDown"
+                 swiper-animate-duration="1s"
+                 swiper-animate-delay="0.8s">
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="lib/js/swiper.min.js"></script>
+<script src="lib/js/swiper.animate1.0.2.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    (function () {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + "px";
+    })();
+    //音频
+    var musicBtn = document.querySelector(".musicBtn");
+    var audio = document.getElementsByClassName("audio")[0];
+    var btnOff = document.querySelector(".btnOff");
+    var n = 0;
+    musicBtn.onclick = function () {
+        if (audio.paused && n == 0) {
+            audio.play();
+            btnOff.style.display = "block";
+            n = 1;
+        } else {
+            audio.pause();
+            btnOff.style.display = "none";
+            n = 0;
+        }
+    };
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+        slidesPerView: 1,
+        mousewheelControl: true,
+        onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+</script>
+</body>
+</html>
