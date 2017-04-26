@@ -2,7 +2,8 @@
 (function () {
     var nav = document.querySelector(".nav");
     window.onscroll = function () {
-        if (document.body.scrollTop > 0) {
+        if (document.body.scrollTop > 0||document.documentElement.scrollTop >0) {
+            console.log(1);
             nav.style.background = "rgba(0,0,0,1)";
             nav.style.height = "50px";
         } else {
