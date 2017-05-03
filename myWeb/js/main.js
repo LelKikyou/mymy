@@ -13,7 +13,6 @@
     };
     var nav_list = document.querySelectorAll(".nav_list li a");
     for (var i = 0; i < nav_list.length; i++) {
-        +(function (i) {
             nav_list[i].onmouseenter = function () {
                 this.style.animation = "moveTopDow 1s linear";
                 this.style.color = "#f4d03f";
@@ -22,7 +21,6 @@
                 this.style.animation = "";
                 this.style.color = "white";
             }
-        })(i)
     }
 })();
 // 头部
@@ -37,17 +35,17 @@
         this.style.height = "100px";
     }
 })();
+//封装查找所有兄弟节点的方法
+function siblings(elm) {
+    var a = [];
+    var p = elm.parentNode.children;//可能children不兼容
+    for(var i =0,pl= p.length;i<pl;i++) {
+        if(p[i] !== elm) a.push(p[i]);
+    }
+    return a;
+}
 //基本资料
 (function () {
-    //封装查找所有兄弟节点的方法
-    function siblings(elm) {
-        var a = [];
-        var p = elm.parentNode.children;//可能children不兼容
-        for(var i =0,pl= p.length;i<pl;i++) {
-            if(p[i] !== elm) a.push(p[i]);
-        }
-        return a;
-    }
 
     var myMainData=document.querySelectorAll(".myMainData>div");
     var myMain=document.querySelector(".myMain");
@@ -75,5 +73,74 @@
                }
            }
        })(i)
+    }
+})();
+//项目经验
+(function () {
+    //展示项目部分
+    var proChange=document.querySelectorAll(".projectImg ul li");
+    var proImg=document.querySelectorAll(".proImg");
+    var proFilm=document.querySelectorAll(".proFilm");
+    var proSearch=document.querySelectorAll(".proFilm>div");
+    for(var i=0;i<proChange.length;i++){
+        +function (i) {
+            proChange[i].onmouseenter=function () {
+                proImg[i].style.left="-30px";
+                proImg[i].style.top="-30px";
+                proImg[i].style.width="410px";
+                proImg[i].style.height="410px";
+            //    改变黑色的膜
+                proFilm[i].style.left="-30px";
+                proFilm[i].style.top="-30px";
+                proFilm[i].style.width="410px";
+                proFilm[i].style.height="410px";
+                proFilm[i].style.background="rgba(0,0,0,0.5)";
+            //    搜索跳出来
+                proSearch[i].style.animation="bounceInDown 0.5s";
+                proSearch[i].style.animationFillMode="forwards";
+            };
+            proChange[i].onmouseleave=function () {
+                proImg[i].style.left=0;
+                proImg[i].style.top=0;
+                proImg[i].style.width="350px";
+                proImg[i].style.height="350px";
+                //    改变黑色的膜
+                proFilm[i].style.left=0;
+                proFilm[i].style.top=0;
+                proFilm[i].style.width="350px";
+                proFilm[i].style.height="350px";
+                proFilm[i].style.background="rgba(0,0,0,0)";
+            //    跳走
+                proSearch[i].style.animation="bounceOutUp 0.5s";
+                proSearch[i].style.animationFillMode="forwards";
+            }
+        }(i)
+    }
+    //展示导航部分
+    var projectNav=document.querySelectorAll(".projectNav li");
+    for (var n=0;n<projectNav.length;n++){
+        +function (n) {
+            projectNav[n].onclick=function () {
+                //nav颜色
+                this.classList.add("addColor");
+                for (var m=0;m<siblings(this).length;m++){
+                    siblings(this)[m].classList.remove("addColor");
+                }
+                //    展示部分的
+                if(n===0){
+                    proChange[0].style.display="block";
+                    proChange[1].style.display="block";
+                    proChange[2].style.display="block"
+                }else if(n===1){
+                    proChange[0].style.display="block";
+                    proChange[1].style.display="block";
+                    proChange[2].style.display="none"
+                }else if(n===2){
+                    proChange[0].style.display="none";
+                    proChange[1].style.display="none";
+                    proChange[2].style.display="block"
+                }
+            }
+        }(n)
     }
 })();
