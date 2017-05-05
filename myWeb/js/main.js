@@ -7,14 +7,14 @@
 })();
 
 //nav
-(function () {
+function nav() {
     var nav = document.querySelector(".nav");
     window.onscroll = function () {
         if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
             nav.style.background = "rgba(0,0,0,1)";
             nav.style.height = "50px";
         } else {
-            nav.style.background = "";
+            nav.style.background = "none";
             nav.style.height = "80px";
         }
     };
@@ -29,7 +29,8 @@
             this.style.color = "white";
         }
     }
-})();
+}
+nav();
 // 头部
 (function () {
     var faceDown = document.querySelector(".faceDown div");
@@ -81,75 +82,75 @@ function siblings(elm) {
         })(i)
     }
 })();
-// //项目经验
-// (function () {
-//     //展示项目部分
-//     var proChange = document.querySelectorAll(".projectImg ul li");
-//     var proImg = document.querySelectorAll(".proImg");
-//     var proFilm = document.querySelectorAll(".proFilm");
-//     var proSearch = document.querySelectorAll(".proFilm>div");
-//     for (var i = 0; i < proChange.length; i++) {
-//         +function (i) {
-//             proChange[i].onmouseenter = function () {
-//                 proImg[i].style.left = "-30px";
-//                 proImg[i].style.top = "-30px";
-//                 proImg[i].style.width = "410px";
-//                 proImg[i].style.height = "410px";
-//                 //    改变黑色的膜
-//                 proFilm[i].style.left = "-30px";
-//                 proFilm[i].style.top = "-30px";
-//                 proFilm[i].style.width = "410px";
-//                 proFilm[i].style.height = "410px";
-//                 proFilm[i].style.background = "rgba(0,0,0,0.5)";
-//                 //    搜索跳出来
-//                 proSearch[i].style.animation = "bounceInDown 0.5s";
-//                 proSearch[i].style.animationFillMode = "forwards";
-//             };
-//             proChange[i].onmouseleave = function () {
-//                 proImg[i].style.left = 0;
-//                 proImg[i].style.top = 0;
-//                 proImg[i].style.width = "350px";
-//                 proImg[i].style.height = "350px";
-//                 //    改变黑色的膜
-//                 proFilm[i].style.left = 0;
-//                 proFilm[i].style.top = 0;
-//                 proFilm[i].style.width = "350px";
-//                 proFilm[i].style.height = "350px";
-//                 proFilm[i].style.background = "rgba(0,0,0,0)";
-//                 //    跳走
-//                 proSearch[i].style.animation = "bounceOutUp 0.5s";
-//                 proSearch[i].style.animationFillMode = "forwards";
-//             }
-//         }(i)
-//     }
-//     //展示导航部分
-//     var projectNav = document.querySelectorAll(".projectNav li");
-//     for (var n = 0; n < projectNav.length; n++) {
-//         +function (n) {
-//             projectNav[n].onclick = function () {
-//                 //nav颜色
-//                 this.classList.add("addColor");
-//                 for (var m = 0; m < siblings(this).length; m++) {
-//                     siblings(this)[m].classList.remove("addColor");
-//                 }
-//                 //    展示部分的
-//                 if (n === 0) {
-//                     proChange[0].style.display = "block";
-//                     proChange[1].style.display = "block";
-//                     proChange[2].style.display = "block"
-//                 } else if (n === 1) {
-//                     proChange[0].style.display = "block";
-//                     proChange[1].style.display = "block";
-//                     proChange[2].style.display = "none"
-//                 } else if (n === 2) {
-//                     proChange[0].style.display = "none";
-//                     proChange[1].style.display = "none";
-//                     proChange[2].style.display = "block"
-//                 }
-//             }
-//         }(n)
-//     }
-// })();
+//项目经验
+(function () {
+    //展示项目部分
+    var proChange = document.querySelectorAll(".projectImg ul li");
+    var proImg = document.querySelectorAll(".proImg");
+    var proFilm = document.querySelectorAll(".proFilm");
+    var proSearch = document.querySelectorAll(".proFilm>div");
+    for (var i = 0; i < proChange.length; i++) {
+        +function (i) {
+            proChange[i].onmouseenter = function () {
+                proImg[i].style.left = "-30px";
+                proImg[i].style.top = "-30px";
+                proImg[i].style.width = "410px";
+                proImg[i].style.height = "410px";
+                //    改变黑色的膜
+                proFilm[i].style.left = "-30px";
+                proFilm[i].style.top = "-30px";
+                proFilm[i].style.width = "410px";
+                proFilm[i].style.height = "410px";
+                proFilm[i].style.background = "rgba(0,0,0,0.5)";
+                //    搜索跳出来
+                proSearch[i].style.animation = "bounceInDown 0.5s";
+                proSearch[i].style.animationFillMode = "forwards";
+            };
+            proChange[i].onmouseleave = function () {
+                proImg[i].style.left = 0;
+                proImg[i].style.top = 0;
+                proImg[i].style.width = "350px";
+                proImg[i].style.height = "350px";
+                //    改变黑色的膜
+                proFilm[i].style.left = 0;
+                proFilm[i].style.top = 0;
+                proFilm[i].style.width = "350px";
+                proFilm[i].style.height = "350px";
+                proFilm[i].style.background = "rgba(0,0,0,0)";
+                //    跳走
+                proSearch[i].style.animation = "bounceOutUp 0.5s";
+                proSearch[i].style.animationFillMode = "forwards";
+            }
+        }(i)
+    }
+    //展示导航部分
+    var projectNav = document.querySelectorAll(".projectNav li");
+    for (var n = 0; n < projectNav.length; n++) {
+        +function (n) {
+            projectNav[n].onclick = function () {
+                //nav颜色
+                this.classList.add("addColor");
+                for (var m = 0; m < siblings(this).length; m++) {
+                    siblings(this)[m].classList.remove("addColor");
+                }
+                //    展示部分的
+                if (n === 0) {
+                    proChange[0].style.display = "block";
+                    proChange[1].style.display = "block";
+                    proChange[2].style.display = "block"
+                } else if (n === 1) {
+                    proChange[0].style.display = "block";
+                    proChange[1].style.display = "block";
+                    proChange[2].style.display = "none"
+                } else if (n === 2) {
+                    proChange[0].style.display = "none";
+                    proChange[1].style.display = "none";
+                    proChange[2].style.display = "block"
+                }
+            }
+        }(n)
+    }
+})();
 // //自我评价下的轮播
 // (function () {
 //     var myEva = document.querySelector("#myEva");
