@@ -1,0 +1,213 @@
+@media screen and (max-width: 960px) {
+    /*nav**导航***/
+    .nav {
+        width: 10rem;
+        height: 1.8rem;
+        background: black;
+    }
+    .nav>div{
+        float: none;
+        width: 10rem;
+        height: 0.9rem;
+        line-height: 0.9rem;
+    }
+
+    .nav div:nth-child(1) p {
+        margin:0 auto;
+        width: 3rem;
+        font-size: .4em;
+        color: white;
+    }
+    .nav_list li{
+        margin-top: 0;
+        width: 2rem;
+        height: 0.9rem;
+        font-size:.4em;
+    }
+    .nav_list li a{
+        margin-left: .2rem;
+    }
+    /*header*****头部*/
+    .header {
+        width: 10rem;
+        height: 17.75rem;
+    }
+
+    .header > div {
+        width: 100%;
+        height: 12rem;
+    }
+
+    .headerDesUp {
+        margin: 1.7rem auto 0;
+        width: 8.8rem;
+        height: 1rem;
+        font-size: 1em;
+    }
+
+    .headerDesDown {
+        margin: 1.2rem auto 0;
+        width: 7.2rem;
+        height: .8rem;
+        font-weight: bold;
+        color: #dddddd;
+        font-size: .7em;
+    }
+    /*第一行字*/
+    .headerDesUp span:nth-child(2) {
+        left: 1.1rem;
+    }
+
+    .headerDesUp span:nth-child(3) {
+        left: 2.2rem;
+    }
+
+    .headerDesUp span:nth-child(4) {
+        left: 3.3rem;
+    }
+
+    .headerDesUp span:nth-child(5) {
+        left: 4.4rem;
+    }
+
+    .headerDesUp span:nth-child(6) {
+        left: 5.5rem;
+    }
+
+    .headerDesUp span:nth-child(7) {
+        left: 6.6rem;
+    }
+
+    .headerDesUp span:nth-child(8) {
+        left: 7.7rem;
+    }
+
+    /*第二行字*/
+    .headerDesDown span:nth-child(2) {
+        left: .8rem;
+    }
+
+    .headerDesDown span:nth-child(3) {
+        left: 1.6rem;
+    }
+
+    .headerDesDown span:nth-child(4) {
+        left: 2.4rem;
+    }
+
+    .headerDesDown span:nth-child(5) {
+        left: 3.2rem;
+    }
+
+    .headerDesDown span:nth-child(6) {
+        left: 4rem;
+    }
+
+    .headerDesDown span:nth-child(7) {
+        left: 4.8rem;
+    }
+
+    .headerDesDown span:nth-child(8) {
+        left: 5.6rem;
+    }
+
+    .headerDesDown span:nth-child(9) {
+        left: 6.4rem;
+    }
+
+    /*文字下面的*/
+    .faceDown {
+        margin-top: 2rem;
+    }
+
+    .faceDown div {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    /*mainData**基本资料***/
+    #mainData {
+        width: 10rem;
+        height: 36rem;
+        background-image: linear-gradient(to bottom, #6f7275, #31353a);
+    }
+
+    #mainData > div:nth-child(1) {
+        top: 1rem;;
+        left: 50%;
+        margin-left: -2.25rem;
+        width: 4.5rem;
+        height: 2rem;
+        line-height: 1.4rem;
+        font-size: .9em;
+    }
+
+    #mainData > div:nth-child(1) hr {
+        margin: .3rem auto 0;
+        width: 2rem;
+        border-top: .2rem solid #f4d03f;
+    }
+
+    .myData {
+        top: 0;
+        left: 0;
+        width: 10rem;
+        height: 9rem;
+    }
+
+    .myRecord {
+        top: 9rem;
+        left: 0;
+        width: 10rem;
+        height: 9rem;
+    }
+
+    .myschool {
+        top: 18rem;
+        left: 0;
+        width: 10rem;
+        height: 9rem;
+    }
+
+    .myPhone {
+        top: 27rem;
+        left: 0;
+        width: 10rem;
+        height: 9rem;
+    }
+    .myData > div:nth-child(1) {
+        margin: 2rem auto 0;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .myRecord > div:nth-child(1) {
+        margin: 2rem auto 0;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .myschool > div:nth-child(1) {
+        margin: 2rem auto 0;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .myPhone > div:nth-child(1) {
+        margin: 2rem auto 0;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .myMainData>div:nth-child(1).myData>div:nth-child(1){
+        margin: 3rem auto 0;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .myMainData>div p{
+        font-size: .7em;
+    }
+    .myBlack {
+        display: none;
+    }
+
+}
