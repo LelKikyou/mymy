@@ -1,11 +1,30 @@
-// 获取当前的rem；
-(function () {
-    window.onresize=function () {
-        document.documentElement.style.fontSize=document.documentElement.clientWidth/10+"px";
-    };
-    document.documentElement.style.fontSize=document.documentElement.clientWidth/10+"px";
-})();
 
+//判断屏幕的大小给不同的js
+document.documentElement.style.fontSize=document.documentElement.clientWidth/10+"px";
+var windowWidth = document.documentElement.clientWidth;
+if (windowWidth < 960) {
+    navMobile();
+    myProjectMobile();
+    myCarouselMobile();
+}else {
+    nav();
+    myProject();
+    myCarousel();
+}
+//判断屏幕改变时候给js
+window.onresize=function () {
+    windowWidth = document.documentElement.clientWidth;
+    document.documentElement.style.fontSize=document.documentElement.clientWidth/10+"px";
+    if (windowWidth < 960) {
+        navMobile();
+        myProjectMobile();
+        myCarouselMobile();
+    }else {
+        nav();
+        myProject();
+        myCarousel();
+    }
+};
 //nav
 function nav() {
     var nav = document.querySelector(".nav");
@@ -30,7 +49,29 @@ function nav() {
         }
     }
 }
-nav();
+function navMobile() {
+    var nav = document.querySelector(".nav");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            nav.style.background = "rgba(0,0,0,1)";
+            nav.style.height = "1.8rem";
+        } else {
+            nav.style.background = "none";
+            nav.style.height = "2rem";
+        }
+    };
+    var nav_list = document.querySelectorAll(".nav_list li a");
+    for (var i = 0; i < nav_list.length; i++) {
+        nav_list[i].onmouseenter = function () {
+            this.style.animation = "moveTopDow 1s linear";
+            this.style.color = "#f4d03f";
+        };
+        nav_list[i].onmouseleave = function () {
+            this.style.animation = "";
+            this.style.color = "white";
+        }
+    }
+}
 // 头部
 (function () {
     var faceDown = document.querySelector(".faceDown div");
@@ -83,7 +124,7 @@ function siblings(elm) {
     }
 })();
 //项目经验
-(function () {
+function myProject() {
     //展示项目部分
     var proChange = document.querySelectorAll(".projectImg ul li");
     var proImg = document.querySelectorAll(".proImg");
@@ -121,7 +162,8 @@ function siblings(elm) {
                 proSearch[i].style.animation = "bounceOutUp 0.5s";
                 proSearch[i].style.animationFillMode = "forwards";
             }
-        }(i)
+        }(i);
+        proImg[i].style.width="350px";
     }
     //展示导航部分
     var projectNav = document.querySelectorAll(".projectNav li");
@@ -150,56 +192,124 @@ function siblings(elm) {
             }
         }(n)
     }
-})();
-// //自我评价下的轮播
-// (function () {
-//     var myEva = document.querySelector("#myEva");
-//     var myEvaShow = document.querySelector(".myEvaShow ul");
-//     var myEvaBtn = document.querySelectorAll(".myEvaBtn li span");
-//     var timer;
-//     var timers;
-// //    向右轮播
-//     var pag = 0;
-//
-//     function rightCar() {
-//         pag++;
-//         myEvaShow.style.left = pag * -720 + "px";
-//         if (pag > 3) {
-//             pag = 0;
-//             pag++;
-//             myEvaShow.style.transition = "";
-//             myEvaShow.style.left = 0;
-//             timer = setTimeout(function () {
-//                 myEvaShow.style.transition = "all 0.5s linear";
-//                 myEvaShow.style.left = pag * -720 + "px";
-//             }, 20)
-//         }
-//         btnMove()
-//     }
-//
-//     timers = setInterval(rightCar, 3500);
-//     myEva.onmouseenter = function () {
-//         clearTimeout(timer);
-//         clearInterval(timers);
-//     };
-//     myEva.onmouseleave = function () {
-//         timers = setInterval(rightCar, 3500);
-//     };
-//     //按钮颜色跟着动
-//     function btnMove() {
-//         myEvaBtn[pag == 3 ? 0 : pag].classList.add("addColor");
-//         for (var m = 0; m < siblings(myEvaBtn[pag == 3 ? 0 : pag].parentNode).length; m++) {
-//             siblings(myEvaBtn[pag == 3 ? 0 : pag].parentNode)[m].firstElementChild.classList.remove("addColor");
-//         }
-//     }
-// //    点击哪个按钮去哪。
-//     for (var i = 0; i < myEvaBtn.length; i++) {
-//         +function (i) {
-//             myEvaBtn[i].onclick = function () {
-//                 pag = i;
-//                 myEvaShow.style.left = pag * -720 + "px";
-//                 btnMove();
-//             };
-//         }(i)
-//     }
-// })();
+}
+function myProjectMobile() {
+    //展示项目部分
+    var proChange = document.querySelectorAll(".projectImg ul li");
+    var proImg = document.querySelectorAll(".proImg");
+    var proFilm = document.querySelectorAll(".proFilm");
+    var proSearch = document.querySelectorAll(".proFilm>div");
+    for (var i = 0; i < proChange.length; i++) {
+        +function (i) {
+            proChange[i].onmouseenter = null;
+            proChange[i].onmouseleave = null;
+        }(i);
+        proImg[i].style.width="9rem";
+    }
+    //展示导航部分
+    var projectNav = document.querySelectorAll(".projectNav li");
+    for (var n = 0; n < projectNav.length; n++) {
+        +function (n) {
+            projectNav[n].onclick = function () {
+                //nav颜色
+                this.classList.add("addColor");
+                for (var m = 0; m < siblings(this).length; m++) {
+                    siblings(this)[m].classList.remove("addColor");
+                }
+                //    展示部分的
+                if (n === 0) {
+                    proChange[0].style.display = "block";
+                    proChange[1].style.display = "block";
+                    proChange[2].style.display = "block"
+                } else if (n === 1) {
+                    proChange[0].style.display = "block";
+                    proChange[1].style.display = "block";
+                    proChange[2].style.display = "none"
+                } else if (n === 2) {
+                    proChange[0].style.display = "none";
+                    proChange[1].style.display = "none";
+                    proChange[2].style.display = "block"
+                }
+            }
+        }(n)
+    }
+}
+//自我评价下的轮播
+function myCarousel() {
+    var myEva = document.querySelector("#myEva");
+    var myEvaShow = document.querySelector(".myEvaShow ul");
+    var myEvaBtn = document.querySelectorAll(".myEvaBtn li span");
+    var timer;
+    var timers;
+//    向右轮播
+    var pag = 0;
+    function rightCar() {
+        pag++;
+        myEvaShow.style.left = pag * -720 + "px";
+        if (pag > 3) {
+            pag = 0;
+            pag++;
+            myEvaShow.style.transition = "";
+            myEvaShow.style.left = 0;
+            timer = setTimeout(function () {
+                myEvaShow.style.transition = "all 0.5s linear";
+                myEvaShow.style.left = pag * -720 + "px";
+            }, 20)
+        }
+        btnMove()
+    }
+
+    timers = setInterval(rightCar, 3500);
+    myEva.onmouseenter = function () {
+        clearTimeout(timer);
+        clearInterval(timers);
+    };
+    myEva.onmouseleave = function () {
+        timers = setInterval(rightCar, 3500);
+    };
+    //按钮颜色跟着动
+    function btnMove() {
+        myEvaBtn[pag == 3 ? 0 : pag].classList.add("addColor");
+        for (var m = 0; m < siblings(myEvaBtn[pag == 3 ? 0 : pag].parentNode).length; m++) {
+            siblings(myEvaBtn[pag == 3 ? 0 : pag].parentNode)[m].firstElementChild.classList.remove("addColor");
+        }
+    }
+//    点击哪个按钮去哪。
+    for (var i = 0; i < myEvaBtn.length; i++) {
+        +function (i) {
+            myEvaBtn[i].onclick = function () {
+                pag = i;
+                myEvaShow.style.left = pag * -720 + "px";
+                btnMove();
+            };
+        }(i)
+    }
+}
+function myCarouselMobile() {
+    var myEva = document.querySelector("#myEva");
+    var myEvaShow = document.querySelector(".myEvaShow ul");
+    var myEvaBtn = document.querySelectorAll(".myEvaBtn li span");
+    var timer;
+    var timers;
+//    向右轮播
+    var pag = 0;
+        clearTimeout(timer);
+        clearInterval(timers);
+    //按钮颜色跟着动
+    function btnMove() {
+        myEvaBtn[pag == 3 ? 0 : pag].classList.add("addColor");
+        for (var m = 0; m < siblings(myEvaBtn[pag == 3 ? 0 : pag].parentNode).length; m++) {
+            siblings(myEvaBtn[pag == 3 ? 0 : pag].parentNode)[m].firstElementChild.classList.remove("addColor");
+        }
+    }
+//    点击哪个按钮去哪。
+    for (var i = 0; i < myEvaBtn.length; i++) {
+        +function (i) {
+            myEvaBtn[i].onclick = function () {
+                pag = i;
+                myEvaShow.style.left = pag * -9 + "rem";
+                btnMove();
+            };
+        }(i)
+    }
+}
