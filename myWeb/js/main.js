@@ -2,7 +2,7 @@
 // 懒加载图片
 Echo.init({
     offset:0,
-    throttle:1000
+    throttle:0
 })
 //判断屏幕的大小给不同的js
 document.documentElement.style.fontSize=document.documentElement.clientWidth/10+"px";
