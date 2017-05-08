@@ -782,6 +782,7 @@ body {
     right: 0;
     width: 450px;
     height: 360px;
+    background: url("../img/loading.gif") no-repeat center;
 }
 
 .skillPic > div > p {
@@ -801,6 +802,7 @@ body {
 .wavePic img {
     position: absolute;
     z-index: 10;
+    background: url("../img/loading.gif") no-repeat center;
 }
 
 .wavePic img:nth-child(1) {
@@ -957,6 +959,7 @@ body {
     left: 0;
     width: 350px;
     height: 350px;
+    background: url("../img/loading.gif") no-repeat center;
 }
 
 .proFilm {
