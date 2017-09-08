@@ -5,78 +5,20 @@
     <title>Title</title>
 </head>
 <style>
-    * {
-        padding: 0;
+    *{
         margin: 0;
-        font-family: "微软雅黑";
+        padding: 0;
     }
     html,body{
         height: 100%;
-        overflow: hidden;
-        background: url("timg.png") no-repeat;
-        background-size: cover;
-    }
-    .flake{
-        position: absolute;
-        top:-50px;
-        color: #fff;
+        background-color: #000;
     }
 </style>
 <body>
 
 </body>
 <script>
-    let text="1";
-    setTimeout(()=>{
-        text='2'
-    },4000);
-    setTimeout(()=>{
-        text='3'
-    },8000);
-    setTimeout(()=>{
-        text='4'
-    },12000);
-    setTimeout(()=>{
-        text='5'
-    },16000);
-    setTimeout(()=>{
-        text='6'
-    },20000);
-    setTimeout(()=>{
-        text='7'
-    },24000);
-    setTimeout(()=>{
-        text='8'
-    },28000);
-    setTimeout(()=>{
-        text='9'
-    },32000);
-    setTimeout(()=>{
-        text='10'
-    },36000);
-    setTimeout(()=>{
-        text='<img src="timg.jpg" width="200">'
-    },40000);
-    function flake() {
-        let left=Math.random()*document.body.clientWidth;
-        let color='rgb('+parseInt(Math.random()*256+1)+','+parseInt(Math.random()*256+1)+','+parseInt(Math.random()*256+1)+')'
-        let flake=document.createElement("div");
-        flake.innerHTML=text;
-        flake.className='flake';
-        flake.style.left=left+'px';
-        let time=4+Math.random()*5;
-        flake.style.transition='all '+time+'s'+' linear';
-        flake.style.fontSize=Math.random()*50+20+'px';
-        flake.style.color=color;
-        document.body.appendChild(flake);
-        flake.style.top=document.body.clientHeight+'px';
-        flake.style.left=Math.random()*document.body.clientWidth+'px';
-        setTimeout(function () {
-            flake.remove()
-        },time*1000)
-    }
-    setInterval(function () {
-        flake()
-    },100)
+    let img = new Image();
+    img.src = "img/timg.png";
 </script>
 </html>
