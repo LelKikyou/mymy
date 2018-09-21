@@ -1,11 +1,6 @@
 <template>
     <div class="shzxjzpt">
-        <div class="home-tab">
-            <Tag v-for="(item,index) in tab" :class="{'active':index===active}"
-                 @click.native="linkUrl(item.url,index)">
-                {{item.name}}
-            </Tag>
-        </div>
+        <homeTab :tab="tab"></homeTab>
         <div class="home-content">
             <router-view></router-view>
         </div>
@@ -13,41 +8,50 @@
 </template>
 
 <script>
+    import homeTab from '@/components/home-tab/homeTab'
     export default {
         name: "shzxjzpt",
         data() {
             return {
-                active:0,
                 tab: [
                     {
                         name: "数据概览",
-                        url:"sjgl"
+                        url: "sjgl"
                     },
                     {
                         name: "关联分析",
-                        url:"glfx"
+                        url: "glfx"
                     },
                     {
                         name: "临时分析",
-                        url:""
+                        url: "lsfx"
                     },
                     {
                         name: "流入分析",
-                        url:""
+                        url: "lrfx"
+                    },
+                    {
+                        name: "数据报表",
+                        url: "sjbb"
                     }
                 ]
             }
         },
-        methods:{
-            linkUrl(name,index){
-                this.$router.push({
-                    name: name,
-                });
-            }
+        components:{
+            homeTab
         }
     }
 </script>
 
 <style scoped>
-
+    .shzxjzpt {
+        width: 100%;
+        height: 100%;
+    }
+    .home-content {
+        width: 100%;
+        height: calc(100% - 40px);
+        background: url("../../../assets/shzxjzpt/body_bg.png") no-repeat;
+        background-size: cover;
+    }
 </style>

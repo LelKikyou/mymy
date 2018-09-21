@@ -4,8 +4,6 @@ import Shzxjzpt from '../view/home/shzxjzpt/shzxjzpt'
 import Znss from '../view/home/znss/znss'
 import b1 from '../view/home/b1/b1'
 import b2 from '../view/home/b2/b2'
-import Sjgl from '../view/home/shzxjzpt/sjgl/sjgl'
-import Glfx from '../view/home/shzxjzpt/glfx/glfx'
 export default [
     {
         path: '/',
@@ -31,6 +29,7 @@ export default [
             {
                 path: '/home/shzxjzpt',
                 name: 'shzxjzpt',
+                redirect: '/home/shzxjzpt/sjgl',
                 component: Shzxjzpt,
                 meta: {
                     title: "上海执行矫治平台"
@@ -39,7 +38,7 @@ export default [
                     {
                         path: '/home/shzxjzpt/sjgl',
                         name: 'sjgl',
-                        component: Sjgl,
+                        component: ()=>import('../view/home/shzxjzpt/sjgl/sjgl'),
                         meta: {
                             title: "数据概览"
                         }
@@ -47,9 +46,33 @@ export default [
                     {
                         path: '/home/shzxjzpt/glfx',
                         name: 'glfx',
-                        component: Glfx,
+                        component: ()=>import('../view/home/shzxjzpt/glfx/glfx'),
                         meta: {
                             title: "关联分析"
+                        }
+                    },
+                    {
+                        path: '/home/shzxjzpt/lrfx',
+                        name: 'lrfx',
+                        component: ()=>import('../view/home/shzxjzpt/lrfx/lrfx'),
+                        meta: {
+                            title: "流入分析"
+                        }
+                    },
+                    {
+                        path: '/home/shzxjzpt/lsfx',
+                        name: 'lsfx',
+                        component: ()=>import('../view/home/shzxjzpt/lsfx/lsfx'),
+                        meta: {
+                            title: "临时分析"
+                        }
+                    },
+                    {
+                        path: '/home/shzxjzpt/sjbb',
+                        name: 'sjbb',
+                        component: ()=>import('../view/home/shzxjzpt/sjbb/sjbb'),
+                        meta: {
+                            title: "数据报表"
                         }
                     }
                 ]

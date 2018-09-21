@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <headTab :tabData="tabData"></headTab>
+        <headTab></headTab>
         <div class="content">
             <router-view></router-view>
         </div>
@@ -14,18 +14,9 @@
         name: 'home',
         data() {
             return {
-                //tab列表参数
-                tabData: [
-                    {
-                        name: "标题1",
-                        url: 'b1'
-                    },
-                    {
-                        name: "标题2",
-                        url: 'b2'
-                    }
-                ]
             }
+        },
+        created(){
         },
         components: {
             headTab: headTab
@@ -40,6 +31,6 @@
 
     .home .content {
         width: 100%;
-        height: calc(100% - 70px);
+        height: calc(100% - 60px);
     }
 </style>

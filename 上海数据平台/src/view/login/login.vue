@@ -1,34 +1,55 @@
 <template>
     <div class="login">
-        <Input v-model="login.name" placeholder="账号" style="width: 300px" />
-        <Input v-model="login.paw" placeholder="密码" style="width: 300px" />
-        <Button v-on:click="loginTo(login)" type="warning">登录</Button>
+        <div class="content">
+            <div class="title">上海执行矫治平台</div>
+            <div class="login-content">
+                <loginFrom></loginFrom>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+    import loginFrom from '../components/loginFrom/loginFrom'
     export default {
         name: "login",
-        data:function () {
-            return{
-                login:{
-                    name:"",
-                    paw:""
-                }
-            }
-        },
-        methods:{
-            loginTo:function () {
-                this.$cookie.set('sdcmToken', 'hqy', 1);
-                this.$router.push({
-                    name: 'home',
-                    path: '/home'
-                })
-            }
+        components: {
+            loginFrom
         }
     }
 </script>
 
 <style scoped>
+    .login {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: url("../../assets/shzxjzpt/body_bg.png") no-repeat;
+        background-size: cover;
+    }
 
+    .login .content {
+        width: 350px;
+        height: 335px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .login-content {
+        margin-top: 40px;
+        width: 100%;
+        height: 240px;
+    }
 </style>
