@@ -2,8 +2,7 @@
 //没经过本人同意不许修改
 import axios from 'axios'
 import {URL, TOKEN} from '@/api/URL'
-import {getCookie,setCookie} from "@/libs/tools";
-
+import Cookies from "js-cookie"
 class HttpAsynAxios {
     constructor() {
         //请求参数配置
@@ -36,7 +35,7 @@ class HttpAsynAxios {
     //请求拦截器
     httpInterceptor(instance) {
         //http request 请求拦截器，有token值则配置上token值
-        let token = getCookie(TOKEN);
+        let token = Cookies.get(TOKEN);
         instance.interceptors.request.use(
             config => {
                 this.removeQueue(config); // 中断之前的同名请求
@@ -45,7 +44,7 @@ class HttpAsynAxios {
                     this.queue.push({ urlsign: this.urlSign(config), cancel: c });
                 });
                 if (!!token) {  // 每次发送请求之前判断是否存在token，如果存在，则统一在http请求的header都加上token，不用每次请求都手动添加
-                    config.headers.Authorization = `Bearer ${token}`;
+                    config.headers.Authorization =token;
                 }
                 return config;
             },
@@ -60,7 +59,7 @@ class HttpAsynAxios {
                 //如果返回401则跳转到登录页
                 if(response.status===401){
                     //清楚cookie
-                    setCookie(TOKEN,"");
+                    Cookies.remove(TOKEN);
                     window.location.href = '/login';
                 }
                 return response.data;

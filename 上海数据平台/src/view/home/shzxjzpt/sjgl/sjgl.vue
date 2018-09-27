@@ -23,7 +23,7 @@
                 <div class="map-wrap">
                     <div class="mark-wrap">
                         <div class="mark-item" :class="item.classType" @click="prisonLinkUrl('prisonDetail',index)" @mouseenter="mapEnter(index)"
-                         @mouseleave="mapLeave(index)" v-for="(item,index) in mapMarkList" :style="{left:item.left+'px',top:item.top+'px',width:item.width+'px',height:item.height+'px'}"></div>
+                         @mouseleave="mapLeave(index)" v-for="(item,index) in mapMarkList" :key='index' :style="{left:item.left+'px',top:item.top+'px',width:item.width+'px',height:item.height+'px'}"></div>
                         
                     </div>
                 </div>
@@ -39,8 +39,8 @@
                     
                       <div class="swiper-container" v-on:mouseenter="stopPlay()" v-on:mouseleave="play()">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" v-for="item1 in gzPeopleList" >
-                                <div class="sort-item" v-for="item2 in item1.pList">
+                            <div class="swiper-slide" v-for="(item1,index) in gzPeopleList" :key='index'>
+                                <div class="sort-item" v-for="(item2,index2) in item1.pList"  :key='index2' @click="handleAdd(item2.peopleName,item2.url)" >
                                     <span class="icon" :class="item2.peopleType==0?'y-icon':item2.peopleType==1?'g-icon':'b-icon'"></span>
                                     <img class="pic" :src="item2.imgSrc" alt="">
                                     <span class="name">{{item2.peopleName}}</span>
@@ -73,33 +73,15 @@
                         </span>
                     </div>
                     <div class="menu">
-                       <div class="menu-item">
-                           <span class="sp-one">矫正人员数量</span>
-                           <span class="sp-two">同比去年</span>
-                           <span class="sp-three">123456</span>
+                       <div class="menu-item" v-for="(item,index) in sqjzList" :key='index' :class="index==1?'menu-iten-center':''">
+                           <span class="sp-one">{{item.title}}</span>
+                           <span class="sp-two">{{item.sTitle}}</span>
+                           <span class="sp-three">{{item.num}}</span>
                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
+                               <div :class="item.type==0?'add-icon':item.type==1?'equal-icon':'reduce-icon'"></div>
+                               <span>{{item.biLv}}</span>
                            </div>
-                       </div>
-                       <div class="menu-item menu-iten-center">
-                            <span class="sp-one">本月新增</span>
-                            <span class="sp-two">较上月</span>
-                            <span class="sp-three">123456</span>
-                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
-                            </div>
-                       </div>
-                       <div class="menu-item">
-                            <span class="sp-one">本月减少</span>
-                            <span class="sp-two">较上月</span>
-                            <span class="sp-three">123456</span>
-                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
-                            </div>
-                       </div>
+                       </div>                     
                     </div>
                 </div>
                 <div class="s-same s-margin s-color" style="width:252px;">
@@ -110,33 +92,15 @@
                         </span>
                     </div>
                      <div class="menu">
-                       <div class="menu-item">
-                           <span class="sp-one">矫正人员数量</span>
-                           <span class="sp-two">同比去年</span>
-                           <span class="sp-three">123456</span>
+                       <div class="menu-item" v-for="(item,index) in jyList" :key='index' :class="index==1?'menu-iten-center':''">
+                           <span class="sp-one">{{item.title}}</span>
+                           <span class="sp-two">{{item.sTitle}}</span>
+                           <span class="sp-three">{{item.num}}</span>
                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
+                               <div :class="item.type==0?'add-icon':item.type==1?'equal-icon':'reduce-icon'"></div>
+                               <span>{{item.biLv}}</span>
                            </div>
-                       </div>
-                       <div class="menu-item menu-iten-center">
-                            <span class="sp-one">本月新增</span>
-                            <span class="sp-two">较上月</span>
-                            <span class="sp-three">123456</span>
-                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
-                            </div>
-                       </div>
-                       <div class="menu-item">
-                            <span class="sp-one">本月减少</span>
-                            <span class="sp-two">较上月</span>
-                            <span class="sp-three">123456</span>
-                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
-                            </div>
-                       </div>
+                       </div>                           
                     </div>
                 </div>           
                 <div class="s-same s-margin s-color">
@@ -147,33 +111,15 @@
                         </span>
                     </div>
                     <div class="menu">
-                       <div class="menu-item">
-                           <span class="sp-one">矫正人员数量</span>
-                           <span class="sp-two">同比去年</span>
-                           <span class="sp-three">123456</span>
+                       <div class="menu-item" v-for="(item,index) in jdList"  :key='index' :class="index==1?'menu-iten-center':''">
+                           <span class="sp-one">{{item.title}}</span>
+                           <span class="sp-two">{{item.sTitle}}</span>
+                           <span class="sp-three">{{item.num}}</span>
                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
+                               <div :class="item.type==0?'add-icon':item.type==1?'equal-icon':'reduce-icon'"></div>
+                               <span>{{item.biLv}}</span>
                            </div>
-                       </div>
-                       <div class="menu-item menu-iten-center">
-                            <span class="sp-one">本月新增</span>
-                            <span class="sp-two">较上月</span>
-                            <span class="sp-three">123456</span>
-                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
-                            </div>
-                       </div>
-                       <div class="menu-item">
-                            <span class="sp-one">本月减少</span>
-                            <span class="sp-two">较上月</span>
-                            <span class="sp-three">123456</span>
-                            <div class="d-four">
-                               <img src="" alt="">
-                               <span>2.8%</span>
-                            </div>
-                       </div>
+                       </div>       
                     </div>
                 </div>                         
             </div>
@@ -241,6 +187,7 @@
 </template>
 <script>
 import flowChart from "./components/flowChart";
+import {mapGetters,mapMutations} from 'vuex'
 import yellowIcon from "../../../../assets/shzxjzpt/yellow_icon.png";
 import greenIcon from "../../../../assets/shzxjzpt/green_icon.png";
 import blueIcon from "../../../../assets/shzxjzpt/blue_icon.png";
@@ -248,7 +195,7 @@ import Swiper from "swiper";
 import "../../../../assets/css/swiper.css";
 let mySwiper;
 let autoPlayMapMarkPoint;
-
+let pointIndex=0;
 export default {
   name: "sjgl",
   data() {
@@ -259,50 +206,50 @@ export default {
           classType: "b-icon",
           left: "168",
           top: "205",
-          width: "12",
-          height: "12"
+          width: "8",
+          height: "8"
         },
         {
           classType: "r-icon",
           left: "215",
           top: "184",
-          width: "12",
-          height: "12"
+          width: "8",
+          height: "8"
         },
         {
           classType: "b-icon",
           left: "225",
           top: "150",
-          width: "12",
-          height: "12"
+          width: "8",
+          height: "8"
         },
         {
           classType: "g-icon",
           left: "250",
           top: "130",
-          width: "12",
-          height: "12"
+          width: "8",
+          height: "8"
         },
         {
           classType: "b-icon",
           left: "240",
           top: "235",
-          width: "12",
-          height: "12"
+          width: "8",
+          height: "8"
         },
         {
           classType: "r-icon",
           left: "286",
           top: "185",
-          width: "12",
-          height: "12"
+          width: "8",
+          height: "8"
         },
         {
           classType: "r-icon",
           left: "330",
           top: "122",
-          width: "12",
-          height: "12"
+          width: "8",
+          height: "8"
         }
       ],
       gzPeopleList: [
@@ -313,37 +260,43 @@ export default {
               peopleType: 0,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "李天二"
+              peopleName: "李天二",
+              url: 'criminal'
             },
             {
               peopleType: 1,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "李四"
+              peopleName: "李四",
+              url: 'criminal'
             },
             {
               peopleType: 0,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "王一"
+              peopleName: "王一",
+              url: 'criminal'
             },
             {
               peopleType: 2,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "王二"
+              peopleName: "王二",
+              url: 'criminal'
             },
             {
               peopleType: 0,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "李六一"
+              peopleName: "李六一",
+              url: 'criminal'
             },
             {
               peopleType: 2,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "老七"
+              peopleName: "老七",
+              url: 'criminal'
             }
           ]
         },
@@ -354,37 +307,43 @@ export default {
               peopleType: 2,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "张三元"
+              peopleName: "张三元",
+              url: 'criminal'
             },
             {
               peopleType: 1,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "李四"
+              peopleName: "李四",
+              url: 'criminal'
             },
             {
               peopleType: 0,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "王一赛"
+              peopleName: "王一赛",
+              url: 'criminal'
             },
             {
               peopleType: 1,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "王二嘛"
+              peopleName: "王二嘛",
+              url: 'criminal'
             },
             {
               peopleType: 2,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "李六一"
+              peopleName: "李六一",
+              url: 'criminal'
             },
             {
               peopleType: 2,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "老七"
+              peopleName: "老七",
+              url: 'criminal'
             }
           ]
         },
@@ -395,39 +354,114 @@ export default {
               peopleType: 1,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "张三"
+              peopleName: "张三",
+              url: 'criminal'
             },
             {
               peopleType: 2,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "李四四"
+              peopleName: "李四四",
+              url: 'criminal'
             },
             {
               peopleType: 0,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "王一"
+              peopleName: "王一",
+              url: 'criminal'
             },
             {
               peopleType: 1,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "王二三"
+              peopleName: "王二三",
+              url: 'criminal'
             },
             {
               peopleType: 0,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "李六一"
+              peopleName: "李六一",
+              url: 'criminal'
             },
             {
               peopleType: 2,
               imgSrc:
                 "http://img1.imgtn.bdimg.com/it/u=350875571,3699394328&fm=200&gp=0.jpg",
-              peopleName: "老七"
+              peopleName: "老七",
+              url: 'criminal'
             }
           ]
+        }
+      ],
+      sqjzList:[
+        {
+          title:'矫正人员数量',
+          sTitle:'同比去年',
+          num:'123456',
+          type:'0',
+          biLv:'2.8%'
+        },
+        {
+          title:'本月新增',
+          sTitle:'较上月',
+          num:'123486',
+          type:'1',
+          biLv:'2.3%'
+        },
+        {
+          title:'本月减少',
+          sTitle:'较上月',
+          num:'123456',
+          type:'2',
+          biLv:'1.8%'
+        }
+      ],
+      jyList:[
+        {
+          title:'在押犯数量',
+          sTitle:'同比去年',
+          num:'123456',
+          type:'2',
+          biLv:'2.8%'
+        },
+        {
+          title:'本月新增',
+          sTitle:'较上月',
+          num:'123486',
+          type:'0',
+          biLv:'2.3%'
+        },
+        {
+          title:'本月减少',
+          sTitle:'较上月',
+          num:'123456',
+          type:'2',
+          biLv:'1.8%'
+        }
+      ],
+      jdList:[
+        {
+          title:'戒毒人员数量',
+          sTitle:'同比去年',
+          num:'123456',
+          type:'2',
+          biLv:'2.8%'
+        },
+        {
+          title:'本月新增',
+          sTitle:'较上月',
+          num:'123486',
+          type:'1',
+          biLv:'2.3%'
+        },
+        {
+          title:'本月减少',
+          sTitle:'较上月',
+          num:'123456',
+          type:'1',
+          biLv:'1.8%'
         }
       ]
     };
@@ -435,11 +469,36 @@ export default {
   components: {
     flowChart: flowChart
   },
+  computed:{
+    ...mapGetters({
+      nav:'getNav',
+      criminalActive:'getActive'
+    })
+  },
   mounted() {
     this.drawLine();
     this.lunbo();
+    this.autoPlayMapMark()
   },
   methods: {
+    ...mapMutations({
+      addNav:"addNav",
+      setActive:'setActive'
+    }),
+    handleAdd(name,url){
+      let index=this.nav.length;
+      this.$router.push({
+        name: url,
+        params: { userId: name }
+      });
+      this.setActive(index);
+      let data={
+        name:name,
+        url:url,
+      }
+      this.addNav(data);
+    },
+
     drawLine() {
       // 基于准备好的dom，初始化echarts实例
       let myChart = this.$echarts.init(document.getElementById("peopleLine"));
@@ -613,23 +672,53 @@ export default {
     },
     //地图移入事件
     mapEnter(index) {
-      this.mapMarkList[index].width=20;
-      this.mapMarkList[index].height=20;
+      clearInterval(autoPlayMapMarkPoint);
+      this.mapMarkList[pointIndex].width=8;
+      this.mapMarkList[pointIndex].height=8;
+      this.mapMarkList[index].width=16;
+      this.mapMarkList[index].height=16;
       this.mapMarkList[index].left=this.mapMarkList[index].left-4;
       this.mapMarkList[index].top=this.mapMarkList[index].top-4;
-     
+
     },
     //地图移出事件
     mapLeave(index) {
-      this.mapMarkList[index].width=12;
-      this.mapMarkList[index].height=12;
+      this.autoPlayMapMark()
+      this.mapMarkList[index].width=8;
+      this.mapMarkList[index].height=8;
       this.mapMarkList[index].left=this.mapMarkList[index].left+4;
       this.mapMarkList[index].top=this.mapMarkList[index].top+4;
     },
     autoPlayMapMark(){
+     clearInterval(autoPlayMapMarkPoint);
+      var that=this;
+      that.mapMarkList[pointIndex].width=16;
+      that.mapMarkList[pointIndex].height=16;
       autoPlayMapMarkPoint=setInterval(function(){
+        pointIndex++
 
-      },1000)
+        if(pointIndex>6){
+          pointIndex=0
+        }
+        that.mapMarkList[pointIndex].width=16;
+        that.mapMarkList[pointIndex].height=16;
+       // that.mapMarkList[pointIndex].left=that.mapMarkList[pointIndex].left-4;
+       // that.mapMarkList[pointIndex].top=that.mapMarkList[pointIndex].top-4;
+        if(pointIndex>0){
+          that.mapMarkList[pointIndex-1].width=8;
+          that.mapMarkList[pointIndex-1].height=8;
+         // that.mapMarkList[pointIndex-1].left=that.mapMarkList[pointIndex-1].left+4;
+         // that.mapMarkList[pointIndex-1].top=that.mapMarkList[pointIndex-1].top+4;
+        }else{
+          that.mapMarkList[6].width=8;
+          that.mapMarkList[6].height=8;
+          //that.mapMarkList[6].left=that.mapMarkList[pointIndex-1].left+4;
+         // that.mapMarkList[6].top=that.mapMarkList[pointIndex-1].top+4;
+
+        }
+
+
+      },1500)
     },
     //地图点击事件
     prisonLinkUrl(name, index) {
@@ -637,7 +726,8 @@ export default {
       // this.$router.push({
       //     name: name,
       // });
-    }
+    },
+
   }
 };
 </script>

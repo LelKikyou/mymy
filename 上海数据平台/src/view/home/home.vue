@@ -2,7 +2,7 @@
     <div class="home">
         <headTab></headTab>
         <div class="content">
-            <router-view></router-view>
+                <router-view></router-view>
         </div>
     </div>
 </template>
@@ -12,12 +12,6 @@
 
     export default {
         name: 'home',
-        data() {
-            return {
-            }
-        },
-        created(){
-        },
         components: {
             headTab: headTab
         }

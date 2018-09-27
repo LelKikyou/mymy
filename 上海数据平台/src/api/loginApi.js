@@ -12,3 +12,11 @@ export const loginApi = (login) => {
         url: '/auth/loginIn'
     })
 };
+//注销
+export const logOffApi=(authorization )=>{
+  return httpAxios.axioseRquest({
+      method:'DELETE',
+      data:authorization,
+      url:'/auth/loginOut'
+  })
+};

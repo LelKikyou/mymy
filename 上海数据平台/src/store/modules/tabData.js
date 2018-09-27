@@ -10,40 +10,41 @@ export default {
                     name: "标题2",
                     url: 'b2'
                 },
-                {
-                    name: "标题3",
-                    url: 'b1'
-                },
-                {
-                    name: "标题4",
-                    url: 'b2'
-                },
-                {
-                    name: "标题5",
-                    url: 'b1'
-                },
-                {
-                    name: "标题6",
-                    url: 'b2'
-                },
-                {
-                    name: "标题7",
-                    url: 'b1'
-                },
-                {
-                    name: "标题8",
-                    url: 'b2'
-                },
-                {
-                    name: "标题9",
-                    url: 'b1'
-                },
-                {
-                    name: "标题10",
-                    url: 'b2'
-                }
+                // {
+                //     name: "标题3",
+                //     url: 'b1'
+                // },
+                // {
+                //     name: "标题4",
+                //     url: 'b2'
+                // },
+                // {
+                //     name: "标题5",
+                //     url: 'b1'
+                // },
+                // {
+                //     name: "标题6",
+                //     url: 'b2'
+                // },
+                // {
+                //     name: "标题7",
+                //     url: 'b1'
+                // },
+                // {
+                //     name: "标题8",
+                //     url: 'b2'
+                // },
+                // {
+                //     name: "标题9",
+                //     url: 'b1'
+                // },
+                // {
+                //     name: "标题10",
+                //     url: 'b2'
+                // }
             ],
-            active:-2
+            active:-2,
+            tabScrollLeft:0
         }
     },
     getters:{
@@ -55,6 +56,9 @@ export default {
         },
         getTabData(state){
             return state.tabData;
+        },
+        getTabScrollLeft(state){
+            return state.tabData.tabScrollLeft;
         }
     },
     mutations:{
@@ -69,6 +73,9 @@ export default {
         },
         setActive(state,index){
             state.tabData.active=index;
+        },
+        setTabScrollLeft(state,left){
+            state.tabData.tabScrollLeft=left;
         }
     }
 }

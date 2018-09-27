@@ -101,6 +101,7 @@
 
 .lsfx{
     height: 100%;
+    padding-top: 2px;
 }
 .s-title{
     height:40px;
@@ -229,4 +230,16 @@
     outline: none;
     cursor: pointer;
     font-size: 16px;
+}
+
+/*nodata*/
+.noData{
+    text-align: center;
+    /*line-height: 936px;*/
+    margin-top: 380px;
+}
+.noData-big{
+    text-align: center;
+    /*line-height: 936px;*/
+    margin-top: 280px;
 }

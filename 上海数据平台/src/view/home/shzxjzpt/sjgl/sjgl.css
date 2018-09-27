@@ -56,21 +56,18 @@
     border-radius:50%;
     cursor:pointer;
   }
-  .map-wrap .mark-wrap .y-icon{
-     background: url("../../../../assets/shzxjzpt/yellow_icon.png") no-repeat;
-     background-size:100% 100%;
-  }
+
   .map-wrap .mark-wrap .g-icon{
-     background: url("../../../../assets/shzxjzpt/green_icon.png") no-repeat;
-     background-size:100% 100%;
+    background: #47ff00;
+    box-shadow: #68a258 0px 0px 2px 4px;
   }
   .map-wrap .mark-wrap .b-icon{
-     background: url("../../../../assets/shzxjzpt/blue_icon.png") no-repeat;
-     background-size:100% 100%;
+    background: #01ffff;
+    box-shadow: rgb(1, 255, 253,0.6) 0px 0px 2px 4px;
   }
   .map-wrap .mark-wrap .r-icon{
-     background: url("../../../../assets/shzxjzpt/red_icon.png") no-repeat;
-     background-size:100% 100%;
+    background: #fe2627;
+    box-shadow: #894751 0px 0px 2px 4px;
   }
   .map-wrap .mark-wrap .hoverActive{
     width:20px;
@@ -137,13 +134,13 @@
     left: 22px;
   }
   .swiper-container .swiper-slide .y-icon {
-    background: url("../../../../assets/shzxjzpt/yellow_icon.png") no-repeat;
+    background: url("../../../../assets/shzxjzpt/baseIcon.png") no-repeat -144px -50px;
   }
   .swiper-container .swiper-slide .g-icon {
-    background: url("../../../../assets/shzxjzpt/green_icon.png") no-repeat;
+    background: url("../../../../assets/shzxjzpt/baseIcon.png") no-repeat -144px -86px;
   }
   .swiper-container .swiper-slide .b-icon {
-    background: url("../../../../assets/shzxjzpt/blue_icon.png") no-repeat;
+    background: url("../../../../assets/shzxjzpt/baseIcon.png") no-repeat -10px -131px;
   }
   .swiper-container .swiper-slide .pic {
     position: absolute;
@@ -213,11 +210,12 @@
     border-bottom: 1px dashed #6d7989;
   }
   .s-three {
-    float: left;
     width: 758px;
     height: 582px;
     border: 1px solid #a4b0bc;
     border-radius: 4px;
+    position: absolute;
+    left: 1160px;
   }
   .s-bottom {
     margin-top: 2px;
@@ -271,12 +269,34 @@
     position: absolute;
     right: 0;
     top: 35px;
-    width: 60px;
-    height: 60px;
-    background: #ccc;
+    width: 59px;
+    height: 57px;
+    background: url('../../../../assets/shzxjzpt/baseIcon.png') -10px -10px;
     border-radius: 6px;
   }
-  .s-four .s-same .menu .menu-item .d-four img {
+  .s-four .s-same .menu .menu-item .d-four .add-icon {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    width: 35px;
+    height: 24px;
+    background: url('../../../../assets/shzxjzpt/baseIcon.png') -89px -10px;
+  }
+  .s-four .s-same .menu .menu-item .d-four .equal-icon {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    width: 41px;
+    height: 14px;
+    background: url('../../../../assets/shzxjzpt/baseIcon.png') -65px -87px;
+  }
+  .s-four .s-same .menu .menu-item .d-four .reduce-icon {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    width: 35px;
+    height: 24px;
+    background: url('../../../../assets/shzxjzpt/baseIcon.png') -10px -87px;
   }
   .s-four .s-same .menu .menu-item .d-four span {
     position: absolute;

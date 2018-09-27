@@ -8,7 +8,7 @@
             <!--1-->
             <div class="block">
                 <!---->
-                <div class="unit" @click="selectPrison()" v-bind:class="[this.unitActive==true&&this.unitType=='prison'?'active':'']">
+                <div class="unit" @click="select('prison')" v-bind:class="[this.unitActive==true&&this.unitType=='prison'?'active':'']">
                     <i></i>
                     <span>上海全监狱单位</span>
                     <b></b>
@@ -25,7 +25,7 @@
             <!--2-->
             <div class="block">
                 <!---->
-                <div class="unit" @click="selectJudiciary()" v-bind:class="[this.unitActive==true&&this.unitType=='judiciary'?'active':'']">
+                <div class="unit" @click="select('judiciary')" v-bind:class="[this.unitActive==true&&this.unitType=='judiciary'?'active':'']">
                     <i class="icon-2"></i>
                     <span>上海全司法单位</span>
                     <b></b>
@@ -42,7 +42,7 @@
             <!--3-->
             <div class="block">
                 <!---->
-                <div class="unit" @click="selectTreatment()" v-bind:class="[this.unitActive==true&&this.unitType=='treatment'?'active':'']">
+                <div class="unit" @click="select('treatment')" v-bind:class="[this.unitActive==true&&this.unitType=='treatment'?'active':'']">
                     <i class="icon-3"></i>
                     <span>上海全戒毒单位</span>
                     <b></b>
@@ -126,17 +126,9 @@
             this.drawBar();
         },
         methods: {
-            selectPrison(){
-                this.unitType=='prison'&&this.unitActive?this.unitActive=false:this.unitActive=true;
-                this.unitType='prison';
-            },
-            selectJudiciary(){
-                this.unitType=='judiciary'&&this.unitActive?this.unitActive=false:this.unitActive=true;
-                this.unitType='judiciary';
-            },
-            selectTreatment(){
-                this.unitType=='treatment'&&this.unitActive?this.unitActive=false:this.unitActive=true;
-                this.unitType='treatment';
+            select(val){
+                this.unitType==val&&this.unitActive?this.unitActive=false:this.unitActive=true;
+                this.unitType=val;
             },
 
             selectItem(val){

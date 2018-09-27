@@ -3,6 +3,7 @@
 }
 .lsfx{
     height: 100%;
+    padding-top: 2px;
 }
 .s-title{
     height:40px;
@@ -146,29 +147,28 @@
 /*people*/
 .peopleLists{
     height: 80px;
-    margin:0px 10px;
     line-height: 80px;
-    border-bottom: dashed 1px #bdbdbd;
-    cursor:pointer;
+    cursor: pointer;
+    padding: 0 10px;
 }
 .peopleLists:hover{
     background-color: rgba(11,32,62,.2);
 }
 .peopleLists .item{
-    height: 60px;
-    margin: 10px 0;
-    padding: 0 10px;
+    height: 80px;
+    border-bottom: dashed 1px #bdbdbd;
 }
 .peopleLists .item img{
     width: 40px;
     height: 60px;
+    margin-top: 10px;
     float: left;
 }
 .peopleLists .item span{
     color:#fff;
     float: left;
-    height: 60px;
-    line-height: 60px;
+    height: 80px;
+    line-height: 80px;
     margin-left: 20px;
 }
 

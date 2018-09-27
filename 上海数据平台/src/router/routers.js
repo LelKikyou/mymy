@@ -4,6 +4,7 @@ import Shzxjzpt from '../view/home/shzxjzpt/shzxjzpt'
 import Znss from '../view/home/znss/znss'
 import b1 from '../view/home/b1/b1'
 import b2 from '../view/home/b2/b2'
+import criminal from '../view/home/criminal'
 export default [
     {
         path: '/',
@@ -97,6 +98,13 @@ export default [
                 component: b2,
                 meta: {
                     title: "标题2"
+                }
+            },{
+                path: '/home/criminal/:userId',
+                name: 'criminal',
+                component: criminal,
+                meta: {
+                  title: "基本信息"
                 }
             }
         ]

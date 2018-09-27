@@ -8,7 +8,7 @@
             <!--1-->
             <div class="block">
                 <!---->
-                <div class="unit" @click="selectSynthesize()" v-bind:class="[this.unitActive==true&&this.unitType=='synthesize'?'active':'']">
+                <div class="unit" @click="select('synthesize')" v-bind:class="[this.unitActive==true&&this.unitType=='synthesize'?'active':'']">
                     <i></i>
                     <span>综合类报表</span>
                     <b></b>
@@ -25,7 +25,7 @@
             <!--2-->
             <div class="block">
                 <!---->
-                <div class="unit" @click="selectPrison()" v-bind:class="[this.unitActive==true&&this.unitType=='prison'?'active':'']">
+                <div class="unit" @click="select('prison')" v-bind:class="[this.unitActive==true&&this.unitType=='prison'?'active':'']">
                     <i class="icon-2"></i>
                     <span>监狱类报表</span>
                     <b></b>
@@ -42,7 +42,7 @@
             <!--3-->
             <div class="block">
                 <!---->
-                <div class="unit" @click="selectCorrect()" v-bind:class="[this.unitActive==true&&this.unitType=='correct'?'active':'']">
+                <div class="unit" @click="select('correct')" v-bind:class="[this.unitActive==true&&this.unitType=='correct'?'active':'']">
                     <i class="icon-3"></i>
                     <span>社矫类报表</span>
                     <b></b>
@@ -59,7 +59,7 @@
             <!--4-->
             <div class="block">
                 <!---->
-                <div class="unit" @click="selectTreatment()" v-bind:class="[this.unitActive==true&&this.unitType=='treatment'?'active':'']">
+                <div class="unit" @click="select('treatment')" v-bind:class="[this.unitActive==true&&this.unitType=='treatment'?'active':'']">
                     <i class="icon-4"></i>
                     <span>戒毒类报表</span>
                     <b></b>
@@ -99,6 +99,10 @@
                     <img src="../../../../assets/lsfx/close.png" alt="" class="r-close">
                     <div class="line"></div>
                 </div>
+                <!--no data-->
+                <div class="noData" v-show="reportData.length==0">
+                    <img src="../../../../assets/lsfx/null.png" alt="">
+                </div>
             </div>
         </div>
         <!--content-->
@@ -107,21 +111,30 @@
                 <span class="s-span">报表浏览</span>
             </div>
             <!---->
-            <div class="downArea clearfix">
-                <button><img src="../../../../assets/lsfx/down.png" alt="">下载</button>
+            <div class="r-box">
+                <!---->
+                <!--<div class="downArea clearfix">-->
+                    <!--<button><img src="../../../../assets/lsfx/down.png" alt="">下载</button>-->
+                <!--</div>-->
+                <!--&lt;!&ndash;&ndash;&gt;-->
+                <!--<div class="r-info">-->
+                    <!--<h2>XXXX报表</h2>-->
+                    <!--<p>富强、民主、文明、和谐，倡导自由、平等、公正、法治，倡导爱国、敬业、诚信、友善，积极培育和践行社会主义核心价值观。富强、-->
+                        <!--民主、文明、和谐是国家层面的价值目标，自由、平等、公正、法治是社会层面的价值取向，爱国、敬业、诚信、-->
+                        <!--友善是公民个人层面的价值准则。富强、民主、文明、和谐，倡导自由、平等、公正、法治，倡导爱国、敬业、诚信、友善，积极培育和践行-->
+                        <!--社会主义核心价值观。富强、民主、文明、和谐是国家层面的价值目标-->
+                        <!--自由、平等、公正、法治是社会层面的价值取向，爱国、敬业、诚信、友善是公民个人层面的价值准则，富强、民主、文明、和谐，倡导自由-->
+                        <!--平等、公正、法治，倡导爱国、敬业、诚信、友善，积极培育和践行社会主义核心价值观。富强、民主、文明、和谐是国家层面的价值目标自-->
+                        <!--由、平等、公正、法治是社会层面的价值取向，爱国、敬业、诚信、-->
+                        <!--友善是公民个人层面的价值准则。</p>-->
+                <!--</div>-->
+                <!---->
+                <!--no data-->
+                <div class="noData-big">
+                    <img src="../../../../assets/lsfx/null-big.png" alt="">
+                </div>
             </div>
-            <!---->
-            <div class="r-info">
-                <h2>XXXX报表</h2>
-                <p>富强、民主、文明、和谐，倡导自由、平等、公正、法治，倡导爱国、敬业、诚信、友善，积极培育和践行社会主义核心价值观。富强、
-                    民主、文明、和谐是国家层面的价值目标，自由、平等、公正、法治是社会层面的价值取向，爱国、敬业、诚信、
-                    友善是公民个人层面的价值准则。富强、民主、文明、和谐，倡导自由、平等、公正、法治，倡导爱国、敬业、诚信、友善，积极培育和践行
-                    社会主义核心价值观。富强、民主、文明、和谐是国家层面的价值目标
-                    自由、平等、公正、法治是社会层面的价值取向，爱国、敬业、诚信、友善是公民个人层面的价值准则，富强、民主、文明、和谐，倡导自由
-                    平等、公正、法治，倡导爱国、敬业、诚信、友善，积极培育和践行社会主义核心价值观。富强、民主、文明、和谐是国家层面的价值目标自
-                    由、平等、公正、法治是社会层面的价值取向，爱国、敬业、诚信、
-                    友善是公民个人层面的价值准则。</p>
-            </div>
+
         </div>
     </div>
 </template>
@@ -182,22 +195,11 @@
         mounted(){
 
         },
+
         methods: {
-            selectCorrect(){
-                this.unitType=='correct'&&this.unitActive?this.unitActive=false:this.unitActive=true;
-                this.unitType='correct';
-            },
-            selectPrison(){
-                this.unitType=='prison'&&this.unitActive?this.unitActive=false:this.unitActive=true;
-                this.unitType='prison';
-            },
-            selectSynthesize(){
-                this.unitType=='synthesize'&&this.unitActive?this.unitActive=false:this.unitActive=true;
-                this.unitType='synthesize';
-            },
-            selectTreatment(){
-                this.unitType=='treatment'&&this.unitActive?this.unitActive=false:this.unitActive=true;
-                this.unitType='treatment';
+            select(val){
+                this.unitType==val&&this.unitActive?this.unitActive=false:this.unitActive=true;
+                this.unitType=val;
             },
 
             selectItem(val){

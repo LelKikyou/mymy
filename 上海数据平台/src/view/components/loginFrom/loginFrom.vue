@@ -2,11 +2,11 @@
     <div class="loginFrom">
         <div style="position: relative">
             <i class="iconfont icon-zhanghu"></i>
-            <Input v-model="login.username" placeholder="账户"/>
+            <Input v-model="login.username" @keyup.enter.native="loginBtn" placeholder="账户"/>
         </div>
         <div style="position: relative;margin-top: 20px;">
             <i class="iconfont icon-mima"></i>
-            <Input v-model="login.password" type="password" placeholder="密码"/>
+            <Input v-model="login.password" @keyup.enter.native="loginBtn" type="password" placeholder="密码"/>
         </div>
         <div v-show="err" class="err">
             <i class="iconfont icon-jinggao"></i>
@@ -22,11 +22,13 @@
 
 <script>
     import {mapActions} from 'vuex'
+    import {TOKEN} from "../../../api/URL";
+    import Cookies from "js-cookie"
     export default {
         name: "loginFrom",
         data() {
             return {
-                err: "密码错误!",
+                err: "",
                 loading: false,
                 login: {
                     username: '',
@@ -36,10 +38,27 @@
         },
         methods: {
             ...mapActions({
-                xx: 'loginUser'
+                loginUser: "loginUser"
             }),
-            loginBtn(){
-                this.xx()
+            loginBtn() {
+                Cookies.set(TOKEN,"xx")
+                this.$router.push({
+                    name: 'home'
+                })
+
+
+                // this.loading = true;
+                // //获取登录信息
+                // this.loginUser(this.login).then((res) => {
+                //     this.loading = false;
+                //     this.err = res.mes;
+                //     this.$router.push({
+                //         name: 'home'
+                //     })
+                // }).catch((err) => {
+                //     this.loading = false;
+                //     this.err = err.mes;
+                // })
             }
         }
     }

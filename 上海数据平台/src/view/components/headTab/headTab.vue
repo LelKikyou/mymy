@@ -19,48 +19,64 @@
             <Icon type="ios-arrow-forward" class="btnIcon"/>
         </div>
         <div class="tab-login">
-
+            <div class="userInfo">
+                <i class="iconfont icon-zhanghu"></i>
+                <p class="username" :title="userInfo.username">{{userInfo.username}}</p>
+            </div>
+            <div class="log-off" @click="logOff" title="注销">
+                <i class="iconfont icon-zhuxiao"></i>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-    import {mapGetters,mapMutations} from 'vuex'
+    import {mapGetters, mapMutations} from 'vuex'
 
     export default {
         name: "headTab",
         data() {
             return {
-                tabScrollLeft: 0
+                oldLength: 0  //tab变化之前的值初始化
             }
         },
-        computed:{
+        computed: {
             ...mapGetters({
-                nav:'getNav',
-                active:'getActive'
-            })
+                nav: 'getNav',
+                active: 'getActive',
+                userInfo: "getUserInfo",
+                getTabData: 'getTabData',
+                getTabScrollLeft:'getTabScrollLeft'
+            }),
+        },
+        mounted() {
+            this.$refs.tabScroll.style.left=this.getTabScrollLeft+"px";
+            this.oldLength = this.nav.length;
         },
         methods: {
             ...mapMutations({
-                spliceNav:"spliceNav",
-                setActive:'setActive'
+                spliceNav: "spliceNav",
+                setActive: 'setActive',
+                cancellation: 'cancellation',
+                setTabScrollLeft:'setTabScrollLeft'
             }),
             //删除tab
             handleClose(index) {
-               this.spliceNav(index);
+                this.spliceNav(index);
                 if (index === this.active) {
-                    this.setActive(index-1);
+                    this.setActive(index - 1);
                     this.$router.push({
                         name: index === 0 ? 'znss' : this.nav[index - 1].url
                     });
                 } else if (index < this.active) {
-                    this.setActive(index-1);
+                    this.setActive(this.active - 1);
                 }
             },
             //跳转路由
             linkUrl(name, index) {
                 this.$router.push({
                     name: name,
+                    query: {nav: index}
                 });
                 this.setActive(index);
             },
@@ -68,21 +84,50 @@
             handleScroll(num) {
                 let tabContentWidth = this.$refs.tabContent.offsetWidth;
                 let tabScrollWidth = this.$refs.tabScroll.offsetWidth;
-                let difference = this.tabScrollLeft + tabScrollWidth - tabContentWidth;
+                let difference = this.getTabScrollLeft + tabScrollWidth - tabContentWidth;
                 let left;
                 if (num < 0) {
                     if (difference > 0) {
                         let cWidth = difference + num;
-                        cWidth > 0 ? left = this.tabScrollLeft + num : left = tabContentWidth - tabScrollWidth;
+                        cWidth > 0 ? left = this.getTabScrollLeft + num : left = tabContentWidth - tabScrollWidth;
                     } else {
                         left = parseInt(this.$refs.tabScroll.style.left);
                     }
                 } else {
-                    let cWidth = this.tabScrollLeft + num;
+                    let cWidth = this.getTabScrollLeft + num;
                     cWidth > 0 ? left = 0 : left = cWidth;
                 }
                 this.$refs.tabScroll.style.left = left + "px";
-                this.tabScrollLeft = left;
+                this.setTabScrollLeft(left);
+            },
+            //注销
+            logOff() {
+                //注销
+                this.cancellation();
+            }
+        },
+        watch: {
+            nav(newVal) {
+                this.$nextTick(function () {
+                    let tabContentWidth = this.$refs.tabContent.offsetWidth;
+                    let tabScrollWidth = this.$refs.tabScroll.offsetWidth;
+                    let left = tabScrollWidth - tabContentWidth;
+                    if (!!left && newVal.length > this.oldLength) {
+                        this.handleScroll(-left)
+                    }
+                    if(newVal.length < this.oldLength){
+                        let _this = this;
+                        setTimeout(function () {
+                            let dif=_this.$refs.tabContent.offsetWidth-_this.getTabScrollLeft-_this.$refs.tabScroll.offsetWidth;
+                            if(dif>-_this.getTabScrollLeft){
+                                _this.handleScroll(-_this.getTabScrollLeft)
+                            }else {
+                                _this.handleScroll(dif)
+                            }
+                        },400)
+                    }
+                    this.oldLength = newVal.length;
+                })
             }
         }
     }
@@ -184,12 +229,6 @@
         opacity: 0.7;
     }
 
-    .tab-login {
-        width: 230px;
-        height: 100%;
-        border-right: none;
-    }
-
     .headTab > .tabContent {
         position: relative;
         overflow: hidden;
@@ -236,5 +275,56 @@
         font-size: 22px !important;
         margin-top: -4px;
         margin-left: 10px;
+    }
+
+    .tab-login {
+        width: 230px;
+        height: 100%;
+        border-right: none;
+    }
+
+    .userInfo {
+        position: relative;
+        float: left;
+        width: 170px;
+        height: 100%;
+    }
+
+    .log-off {
+        float: left;
+        cursor: pointer;
+        width: 59px;
+        height: 100%;
+        background-color: #551428;
+    }
+
+    .log-off:hover {
+        background-color: #b80b0f;
+    }
+
+    .log-off > i {
+        margin-left: 18px;
+        line-height: 59px;
+        font-size: 24px;
+    }
+
+    .userInfo > i {
+        font-size: 24px;
+        margin-left: 16px;
+        line-height: 59px;
+    }
+
+    .username {
+        display: inline-block;
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        right: 16px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 59px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
     }
 </style>

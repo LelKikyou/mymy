@@ -1,0 +1,368 @@
+.c-title{
+    height: 40px;
+    background: #092a50;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 5px 20px;
+}
+.c-block{
+    width: 120px;
+    height: 100%;
+    border-left: 1px solid #3a5573;
+    border-right: 1px solid #3a5573;
+    line-height: 30px;
+    text-align: center;
+}
+.c-content {
+    width: 100%;
+    height: calc(100% - 40px);
+    background: url("../../../assets/shzxjzpt/body_bg.png") no-repeat;
+    background-size: cover;
+    padding-top: 2px;
+}
+/*home*/
+.c-criminal{
+    height: 100%;
+}
+
+/*baseInfo*/
+
+.c-baseInfo{
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 976px;
+    border: 1px solid #a4b0bc;
+    border-radius: 4px;
+}
+.c-baseInfo .pic{
+    padding-top: 20px;
+    text-align: center;
+}
+.c-baseInfo .pic img{
+    width: 120px;
+    height: 180px;
+}
+.c-sonTitle{
+    margin-top: 20px;
+}
+.c-sonTitle span{
+    font-family: MicrosoftYaHei-Bold;
+    font-size: 16px;
+    line-height: 1;
+    color: #fbd22c;
+}
+
+.infoBox{
+    padding:0 10px;
+}
+
+.c-item{
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px dashed #bdbdbd;
+    line-height: 40px;
+}
+
+.c-item span{
+    float: left;
+    color:#fbd22c;
+    width: 75px;
+}
+.c-item b,.c-item-b b{
+    width: 28px;
+    height: 14px;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 34px;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+.c-two{
+    float: left;
+    width: 50%;
+}
+.c-item-b{
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px dashed #bdbdbd;
+    line-height: 40px;
+}
+
+.c-item-b span{
+    float: left;
+    color:#fbd22c;
+    width: 100px;
+}
+.cBtnArea{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.cBtnArea button{
+    width: 260px;
+    height: 40px;
+    background-color: #fb3b2c;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    line-height: 40px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*r*/
+.c-tag{
+    width: 650px;
+    float: left;
+    position: relative;
+    height: 470px;
+    border: 1px solid #a4b0bc;
+    border-radius: 4px;
+}
+.c-situation{
+    width: 958px;
+    float: left;
+    position: relative;
+    height: 470px;
+    border: 1px solid #a4b0bc;
+    border-radius: 4px;
+}
+.c-life{
+    width: 1060px;
+    float: left;
+    position: relative;
+    border: 1px solid #a4b0bc;
+    border-radius: 4px;
+    margin-top: 2px;
+    height: 504px;
+}
+.c-dynamics{
+    width: 550px;
+    float: left;
+    position: relative;
+    border: 1px solid #a4b0bc;
+    border-radius: 4px;
+    margin-top: 2px;
+    height: 504px;
+}
+
+.c-tagC{
+    position: relative;
+    height: 428px;
+}
+.tagImgArea{
+    position: absolute;
+    top:0px;
+    left: 226px;
+}
+
+.prisonTag .pTitle{
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 34px;
+    letter-spacing: 0px;
+    color: #fbd22c;
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 50px;
+}
+
+.prisonTag{
+    position: absolute;
+    top:20px;
+    left:30px;
+}
+
+.prisonTag .pTitle img{
+    position: absolute;
+    top: 15px;
+    margin-left: 20px;
+}
+
+/*c-tagType*/
+.prisonTag .c-tagType{
+    width: 195px;
+}
+.prisonTag .c-tagItem{
+    width: 80px;
+    height: 30px;
+    background-color: rgba(251,210,44,.3);
+    border-radius: 9px;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.drugTag{
+    position: absolute;
+    top:20px;
+    right:17px;
+}
+
+.drugTag .pTitle{
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 34px;
+    letter-spacing: 0px;
+    color: #00ffff;
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 105px;
+}
+
+.drugTag .pTitle img{
+    position: absolute;
+    top: 15px;
+    left:0;
+    margin-right: 20px;
+}
+
+.drugTag .c-tagType{
+    width: 225px;
+}
+
+.drugTag .c-tagItem{
+    width: 80px;
+    height: 30px;
+    background-color: rgba(0,255,255,.3);
+    border-radius: 9px;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.correctTag{
+    position: absolute;
+    top:230px;
+    right:17px;
+}
+
+.correctTag .pTitle{
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 34px;
+    letter-spacing: 0px;
+    color: #48ff00;
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 105px;
+}
+
+.correctTag .pTitle img{
+    position: absolute;
+    top: -20px;
+    left:0;
+    margin-right: 20px;
+}
+
+.correctTag .c-tagType{
+    width: 225px;
+}
+
+.correctTag .c-tagItem{
+    width: 80px;
+    height: 30px;
+    background-color: rgba(72,255,0,.3);
+    border-radius: 9px;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.s-title{
+    height:40px;
+    line-height:40px;
+    padding-left:20px;
+    border-bottom:1px solid #bdbdbd;
+}
+.s-title .s-span{
+    color:#fbd22c;
+    font-size: 16px;
+}
+.s-margin {
+    margin-left: 2px;
+    box-sizing: border-box;
+}
+.s-color {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.selDate{
+    margin:20px;
+}
+.selDate select{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px #cbcbcb;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-left: 10px;
+    outline: none;
+    color:#fff;
+    background:url("../../../assets/lsfx/sel.png") no-repeat 60px -1px;
+}
+
+.c-infoBox{
+    padding: 0 10px;
+}
+.c-infoBox .c-infoItem{
+    padding: 10px ;
+    border-bottom: 1px dashed #bdbdbd;
+}
+
+.c-infoBox .c-infoItem .c-infoTime{
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #fbd22c;
+    float: left;
+    width: 50px;
+    text-align: left;
+}
+.c-infoBox .c-infoItem b{
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #fefefe;
+}
