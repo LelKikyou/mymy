@@ -1,17 +1,12 @@
 <template>
-    <div style="color: red">{{xx}}</div>
+    <div style="color: red"></div>
 </template>
 
 <script>
     export default {
         name: "b1",
         data() {
-            return {
-                xx:999
-            }
-        },
-        created() {
-            this.xx=this.$route.query.nav
+            return {}
         }
     }
 </script>

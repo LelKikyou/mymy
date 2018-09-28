@@ -4,7 +4,7 @@ import Shzxjzpt from '../view/home/shzxjzpt/shzxjzpt'
 import Znss from '../view/home/znss/znss'
 import b1 from '../view/home/b1/b1'
 import b2 from '../view/home/b2/b2'
-import criminal from '../view/home/criminal'
+import criminal from '../view/home/criminal/criminal'
 export default [
     {
         path: '/',

@@ -65,8 +65,25 @@ export default {
         spliceNav(state,index){
             state.tabData.nav.splice(index,1);
         },
+        //添加头部nav方法传入参数
         addNav(state,data){
-            state.tabData.nav.push(data);
+            let name=data.name;
+            let nav=state.tabData.nav;
+            let lock=false;
+            let active=0;
+            for(let i=0;i<nav.length;i++){
+                if(name===nav[i].name){
+                    lock=true;
+                    active=i;
+                    break
+                }
+            }
+            if(lock){
+                state.tabData.active=active;
+            }else {
+                state.tabData.active=nav.length;
+                nav.push(data);
+            }
         },
         setTabData(state,data){
             state.tabData=data;

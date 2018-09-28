@@ -1,7 +1,7 @@
 <template>
     <div class="headTab">
-        <div @click="linkUrl('shzxjzpt',-2)" :class="[{'active':-2===active},'tabPage']">上海执行矫治平台</div>
-        <div @click="linkUrl('znss',-1)" :class="[{'active':-1===active},'search']"><i class="iconfont icon-sousuo"></i>智能搜索
+        <div @click="linkUrl({url:'shzxjzpt'},-2)" :class="[{'active':-2===active},'tabPage']">上海执行矫治平台</div>
+        <div @click="linkUrl({url:'znss'},-1)" :class="[{'active':-1===active},'search']"><i class="iconfont icon-sousuo"></i>智能搜索
         </div>
         <div class="left-btn" @click="handleScroll(186)">
             <Icon type="ios-arrow-back" class="btnIcon"/>
@@ -9,7 +9,7 @@
         <div class="tabContent" ref="tabContent">
             <div class="tabScroll" ref="tabScroll" style="left: 0">
                 <Tag v-for="(item,index) in nav" :class="{'active':index===active}"
-                     @click.native="linkUrl(item.url,index)"
+                     @click.native="linkUrl(item,index)"
                      closable @on-close="handleClose(index)">
                     {{item.name}}
                 </Tag>
@@ -46,11 +46,11 @@
                 active: 'getActive',
                 userInfo: "getUserInfo",
                 getTabData: 'getTabData',
-                getTabScrollLeft:'getTabScrollLeft'
+                getTabScrollLeft: 'getTabScrollLeft'
             }),
         },
         mounted() {
-            this.$refs.tabScroll.style.left=this.getTabScrollLeft+"px";
+            this.$refs.tabScroll.style.left = this.getTabScrollLeft + "px";
             this.oldLength = this.nav.length;
         },
         methods: {
@@ -58,7 +58,7 @@
                 spliceNav: "spliceNav",
                 setActive: 'setActive',
                 cancellation: 'cancellation',
-                setTabScrollLeft:'setTabScrollLeft'
+                setTabScrollLeft: 'setTabScrollLeft'
             }),
             //删除tab
             handleClose(index) {
@@ -73,10 +73,12 @@
                 }
             },
             //跳转路由
-            linkUrl(name, index) {
-                this.$router.push({
-                    name: name,
-                    query: {nav: index}
+            linkUrl(item, index) {
+                item.userId ? this.$router.push({
+                    name: item.url,
+                    params: {userId: item.userId}
+                }):this.$router.push({
+                    name: item.url
                 });
                 this.setActive(index);
             },
@@ -115,16 +117,16 @@
                     if (!!left && newVal.length > this.oldLength) {
                         this.handleScroll(-left)
                     }
-                    if(newVal.length < this.oldLength){
+                    if (newVal.length < this.oldLength) {
                         let _this = this;
                         setTimeout(function () {
-                            let dif=_this.$refs.tabContent.offsetWidth-_this.getTabScrollLeft-_this.$refs.tabScroll.offsetWidth;
-                            if(dif>-_this.getTabScrollLeft){
+                            let dif = _this.$refs.tabContent.offsetWidth - _this.getTabScrollLeft - _this.$refs.tabScroll.offsetWidth;
+                            if (dif > -_this.getTabScrollLeft) {
                                 _this.handleScroll(-_this.getTabScrollLeft)
-                            }else {
+                            } else {
                                 _this.handleScroll(dif)
                             }
-                        },400)
+                        }, 400)
                     }
                     this.oldLength = newVal.length;
                 })
