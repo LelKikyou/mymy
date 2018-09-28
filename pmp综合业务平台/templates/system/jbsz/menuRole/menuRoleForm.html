@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/header_form :: header_form">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<style>
+    .main{
+        width: 100%;
+        height: 100%;
+    }
+    div{
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .sdcm-from.left-content{
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+    .right-content{
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="sdcm-from left-content">
+        <div class="sdcm-col sdcm-col-12">
+            <div class="sdcm-col-title"><p>*</p>角色编号：</div>
+            <input id="code" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull">
+        </div>
+        <div class="sdcm-col sdcm-col-12">
+            <div class="sdcm-col-title"><p>*</p>角色名称：</div>
+            <input id="name" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull">
+        </div>
+        <div class="sdcm-col sdcm-col-12">
+            <div class="sdcm-col-title"><p>*</p>状态：</div>
+            <select id="enable" class="sdcm-col-select" type="select">
+                <option value="1" selected="selected">启用</option>
+                <option value="0">禁用</option>
+            </select>
+        </div>
+        <div class="sdcm-col sdcm-col-12">
+            <div class="sdcm-col-title"><p>*</p>角色等级：</div>
+            <input id="level" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="level">
+        </div>
+        <div class="sdcm-col sdcm-col-12">
+            <div class="sdcm-col-title">排序号：</div>
+            <input id="idx" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NumOrNull">
+        </div>
+        <div class="sdcm-col sdcm-col-12">
+            <div class="sdcm-col-title">备注：</div>
+            <textarea id="remark" class="sdcm-col-control" style="height: 150px;margin-top: 5px"></textarea>
+        </div>
+    </div>
+    <div class="right-content">
+
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/js/system/jbsz/menuRole/menuRoleForm.js}"></script>
+<div th:include="/common/footer :: footer"></div>
+</body>
+</html>

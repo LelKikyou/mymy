@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PMP-登录</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/toLogin.css}">
+</head>
+
+<body>
+    <img id="bg" th:src="@{/images/toLogin/bg.jpg}">
+
+    <div id="content">
+        <div id="title_div">
+            <img th:src="@{/images/toLogin/title.png}">
+        </div>
+        <div id="box_div">
+            <img id="box_img" th:src="@{/images/toLogin/box.png}">
+            <img id="form_img" th:src="@{/images/toLogin/form_bg.png}">
+            <img id="float_img" th:src="@{/images/toLogin/float.png}">
+
+            <div id="form_div">
+                <form method="post" id="loginForm">
+                   <div class="user_div">
+                        <img id="user_img" th:src="@{/images/toLogin/user_icon.png}" />
+                        <input id="user_input" name="loginName" type="text" placeholder="账号"/>
+                    </div>
+
+                    <div class="pwd_div">
+                        <img id="pwd_img" th:src="@{/images/toLogin/pwd_icon.png}"/>
+                        <input id="pwd_input" type="password" placeholder="密码"/>
+                        <input id="pwd_input_hidden" style="display: none;" name="password" type="password"/>
+                    </div>
+
+                    <div class="err_div">
+                        <span id="errorMsg"></span>
+                    </div>
+
+                    <div class="btn_div">
+                        <img id="submitBtn" th:src="@{/images/toLogin/login_btn.png}"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" th:src="@{/js/global/jquery-3.3.1.js}"></script>
+    <script type="text/javascript" th:src="@{/js/global/jquery-md5.js}"></script>
+    <script type="text/javascript" th:src="@{/js/toLogin.js}"></script>
+
+</body>
+</html>

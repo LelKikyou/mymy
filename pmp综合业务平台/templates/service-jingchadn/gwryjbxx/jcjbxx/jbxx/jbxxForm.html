@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/header_form :: header_form">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<style>
+.jbxxPhoto{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+}
+</style>
+<body>
+<div style="width: 75%;" class="sdcm-from">
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>警察编号：</div>
+        <input id="code" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="Num">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>姓名：</div>
+        <input id="name" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">身份证号：</div>
+        <input id="idcard" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">别名：</div>
+        <input id="othername" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>性别：</div>
+        <select id="sexid" class="sdcm-col-select" type="select">
+            <option value="男" selected="selected">男</option>
+            <option value="女">女</option>
+        </select>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">曾用名：</div>
+        <input id="oldname" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">民族：</div>
+        <input id="nationid" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">出生日期：</div>
+        <input id="birthday" class="sdcm-col-input sdcm-input-wdatepicker" onclick="WdatePicker({dateFmt:'yyyy-MM-dd', onpicked: function () { $('#effdateend').trigger('change'); } })" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">政治面貌：</div>
+        <input id="partyid" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">籍贯：</div>
+        <input id="nativeid" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">学历：</div>
+        <input id="degreeid" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">职务：</div>
+        <input id="dutyid" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>所属部门：</div>
+        <input id="syoufk" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">职级：</div>
+        <input id="dutylevelid" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>人员类型：</div>
+        <input id="typeid" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>人员状态：</div>
+        <input id="status" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">现任警衔：</div>
+        <input id="rankid" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">是否应聘：</div>
+        <input class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">借调单位：</div>
+        <input id="jdsyoufk" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">任职级时间：</div>
+        <input id="registerdate" class="sdcm-col-input sdcm-input-wdatepicker" onclick="WdatePicker({dateFmt:'yyyy-MM-dd', onpicked: function () { $('#effdateend').trigger('change'); } })" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title sdcm-line">参加工作时间：</div>
+        <input id="jobdate" class="sdcm-col-input sdcm-input-wdatepicker" onclick="WdatePicker({dateFmt:'yyyy-MM-dd', onpicked: function () { $('#effdateend').trigger('change'); } })" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title sdcm-line">是否主持工作：</div>
+        <input class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title sdcm-line">进入单位时间：</div>
+        <input class="sdcm-col-input sdcm-input-wdatepicker" onclick="WdatePicker({dateFmt:'yyyy-MM-dd', onpicked: function () { $('#effdateend').trigger('change'); } })" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title sdcm-line">进入单位形式：</div>
+        <input id="entermodeid" class="sdcm-col-input" type="text">
+    </div>
+</div>
+<div class="jbxxPhoto">
+    <form id="upload" enctype="multipart/form-data" method="post">
+        <input type="file" name="uploadFile" id="pic"/>
+        <input type="button" class="btn" value="提交"/>
+        <span class="showUrl"></span>
+        <img src="" class="showPic" alt="">
+    </form>
+</div>
+<script type="text/javascript" th:src="@{/js/service-jingchadn/gwryjbxx/jcjbxx/jbxxFrom.js}"></script>
+<div th:include="/common/footer :: footer"></div>
+</body>
+</html>

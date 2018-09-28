@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/header_form :: header_form">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div class="sdcm-from">
+        <div class="sdcm-col sdcm-col-6">
+            <div class="sdcm-col-title"><p>*</p>授权人：</div>
+            <div class="sdcm-col-control" id="userid" style="height: 31px;" isvalid="yes" checkexpession="NotNull" errormsg="不能为空"></div>
+        </div>
+        <div class="sdcm-col sdcm-col-6">
+            <div class="sdcm-col-title"><p>*</p>代理人：</div>
+            <div class="sdcm-col-control" id="proxyid" style="height: 31px;" isvalid="yes" checkexpession="NotNull" errormsg="不能为空"></div>
+        </div>
+        <div class="sdcm-col sdcm-col-6">
+            <div class="sdcm-col-title"><p>*</p>开始时间：</div>
+            <input id="effdatestart" class="sdcm-col-input sdcm-input-wdatepicker" onclick="var mainDate=getNowFormatDate();WdatePicker({ minDate:'#F{$dp.$DV(\''+mainDate+'\',{d:1})}',maxDate:'#F{$dp.$D(\'effdateend\',{d:-1})}',dateFmt:'yyyy-MM-dd', onpicked: function () { $('#effdatestart').trigger('change'); } })" type="text" isvalid="yes" checkexpession="NotNull" errormsg="不能为空">
+        </div>
+        <div class="sdcm-col sdcm-col-6">
+            <div class="sdcm-col-title"><p>*</p>结束时间：</div>
+            <input id="effdateend" class="sdcm-col-input sdcm-input-wdatepicker" onclick="var mainDate=getNowFormatDate();WdatePicker({minDate:'#F{$dp.$D(\'effdatestart\',{d:1})||$dp.$DV(\''+mainDate+'\',{d:2})}',dateFmt:'yyyy-MM-dd', onpicked: function () { $('#effdateend').trigger('change'); } })" type="text" isvalid="yes" checkexpession="NotNull" errormsg="不能为空">
+        </div>
+        <div class="sdcm-col sdcm-col-12">
+            <div class="sdcm-col-title"><p>*</p>工作流：</div>
+            <input id="wftempid" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull" errormsg="不能为空">
+        </div>
+    </div>
+    <script type="text/javascript" th:src="@{/js/system/jbsz/userProxy/userProxyForm.js}"></script>
+    <div th:include="/common/footer :: footer"></div>
+</body>
+</html>

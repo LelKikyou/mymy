@@ -1,0 +1,97 @@
+body {
+    overflow: hidden;
+}
+#bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#content {
+    width: 708px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin:-250px 0 0 -355px;
+}
+#title_div {
+    width: 708px;
+    margin: 0 auto;
+    margin-top: -70px;
+}
+#box_div {
+    width: 476px;
+    height: 397px;
+    margin: auto;
+    padding: 0px;
+    position: relative;
+    top: -50px;
+}
+#form_img {
+    position: absolute;
+    top: -350px;
+    left: -720px;
+    opacity: 0.9;
+}
+#float_img {
+    position: absolute;
+    bottom: -60px;
+    left: 20px;
+}
+
+#form_div {
+    width: 436px;
+    height: 357px;
+    padding: 26px;
+    opacity: 0.9;
+    position: relative;
+    top: -376px;
+    left: -8px; /*20px*/
+}
+.user_div {
+    height: 40px;
+    position: relative;
+    margin-top: 20px;
+    left: 27px;/*同注释，新加的*/
+}
+.pwd_div {
+    height: 40px;
+    position: relative;
+    margin-top: 40px;
+    left: 27px;/*同注释，新加的*/
+}
+.err_div {
+    height: 30px;
+    margin-top: 20px;
+    color: red;
+    font-size: 16px;
+    position: relative;/*同注释，新加的*/
+    left: 27px;/*同注释，新加的*/
+}
+.btn_div {
+    position: relative;
+    text-align: center;
+    bottom: -25px;
+}
+#user_img, #pwd_img {
+    position: absolute;
+    left: 15px;
+    margin-top: 7px;
+}
+#user_input, #pwd_input {
+    height:50px;
+    width: 328px; /*382px*/
+    border-radius: 8px;
+    vertical-align: center;
+    padding-left: 60px;
+    font-size: 25px;
+    font-family: "Microsoft YaHei UI Light";
+    border: 0px;
+}
+#submitBtn:hover {
+    background-color: #337ab7;
+}

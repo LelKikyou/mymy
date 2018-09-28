@@ -1,0 +1,395 @@
+/* 进入加载的loading */
+
+.sdcm-loadbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+/*顶部*/
+.user {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 20;
+    font-size: 16px;
+}
+
+.user a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.sdcm-frame-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    background-color: #f3f7fa;
+}
+
+/*菜单栏缩进按钮*/
+
+.sdcm-frame-menu-btn {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    height: 30px;
+    width: 230px;
+    cursor: pointer;
+    color: #aeb9c2;
+    text-align: center;
+    background-color: #87a2c8;
+    z-index: 2;
+}
+
+.sdcm-frame-menu-btn img {
+    margin-top: 4px;
+}
+
+/*菜单*/
+
+.sdcm-frame-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: calc(100% - 130px);
+    background: #325073;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    padding: 80px 0px 50px 0px;
+}
+
+.sdcm-frame-menu .sdcm-menu-item {
+    height: 40px;
+    padding: 0px 15px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+}
+.sdcm-menu-item-text{
+    margin-left: 8px;
+}
+.sdcm-frame-menu-wrap {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.sdcm-frame-menu li {
+    position: relative;
+    width: 100%;
+    zoom: 1;
+}
+
+.sdcm-menu-item {
+    display: block;
+    font-size: 0;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.sdcm-second-menu-list, .sdcm-three-menu-list {
+    display: none;
+}
+
+.sdcm-first-menu-list > li > .sdcm-menu-item:hover {
+    color: #ffc205;
+}
+
+.sdcm-frame-menu .sdcm-menu-item.a-active {
+    color: #ffc205;
+}
+
+.sdcm-frame-menu .sdcm-menu-item-arrow {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 10px;
+    right: 5px;
+}
+
+.sdcm-second-menu-list, .sdcm-three-menu-list {
+    position: relative;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.sdcm-second-menu-list .sdcm-menu-item {
+    padding-left: 40px;
+    padding-right: 15px;
+}
+
+.sdcm-second-menu-list .sdcm-menu-item:hover {
+    color: #ffc205;
+}
+
+.sdcm-three-menu-list .sdcm-menu-item {
+    padding-left: 60px;
+}
+
+.sdcm-menu-item.open > .sdcm-menu-item-arrow {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+/*tabs条*/
+
+.sdcm-frame-tabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 530px);
+    height: 48px;
+    z-index: 2;
+    padding: 0 300px 0 230px;
+}
+
+.sdcm-frame-tabs-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.sdcm-frame-tabs-wrap ul {
+    position: relative;
+    height: 100%;
+    white-space: nowrap;
+}
+.sdcm-frame-tabs-wrap ul :first-child {
+    vertical-align: top;
+}
+.sdcm-frame-tabs-wrap ul :last-child {
+    border-right: none;
+}
+
+.sdcm-frame-tabItem {
+    position: relative;
+    padding: 0 25px 0 15px;
+    background-color: #cfd8e7;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+    height: 48px;
+    line-height: 48px;
+    color: #325073;
+    border-right: 1px solid #b9c8dd;
+}
+
+.sdcm-frame-tabItem .reomve {
+    position: absolute;
+    padding: 2px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 10px;
+    right: 4px;
+    background: url(../images/index/tab_cl.png) no-repeat;
+}
+
+.sdcm-frame-tabItem .reomve:hover {
+    background-position: -25px 0;
+}
+
+.sdcm-frame-tabItem.active {
+    background-color: #87a2c8;
+    color: #fff;
+    padding: 0 27px 0 17px;
+    margin-left: -2px;
+    border-right: none;
+}
+
+/*功能窗口*/
+
+.sdcm-frame-main {
+    position: absolute;
+    width: calc(100% - 230px);
+    height: calc(100% - 50px);
+    z-index: 0;
+    padding: 50px 0px 0px 230px;
+    background: #f3f7fa;
+}
+
+/*功能窗口ifame*/
+
+.sdcm-frame-iframe {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.sdcm-frame-iframe.active {
+    display: block;
+}
+
+/*全屏*/
+
+.sdcm_frame_fullscreen {
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    height: 50px;
+    width: 30px;
+    line-height: 50px;
+    text-align: center;
+    z-index: 3;
+}
+
+.sdcm_frame_fullscreen a {
+    font-size: 14px;
+    color: red;
+}
+
+.sdcm_frame_fullscreen a:hover {
+    color: #fff;
+}
+
+/*菜单列的第三方滚动条样式@@@@@@@@@@@@*/
+
+#mCSB_2_scrollbar_vertical {
+    right: -6px;
+}
+
+#mCSB_2_dragger_vertical .mCSB_dragger_bar {
+    background-color: #86a2c9;
+}
+
+/* tab滚动条插件 @@@@@@@@@@@@@@@@@@@@*/
+
+#mCSB_1_scrollbar_horizontal .mCSB_dragger_bar {
+    background-color: #325074;
+    height: 2px;
+}
+
+#mCSB_1_scrollbar_horizontal {
+    bottom: -8px;
+}
+
+/*菜单关闭后显示样式*/
+
+.sdcm-menu-closed .sdcm-frame-menu {
+    width: 50px;
+}
+
+.sdcm-menu-closed .sdcm-frame-menu-wrap span, .sdcm-menu-closed .sdcm-frame-menu-wrap .sdcm-menu-item-arrow, .sdcm-menu-closed .sdcm-meun-had > a {
+    display: none;
+}
+
+.sdcm-menu-closed .sdcm-frame-menu-wrap a {
+    padding: 0px;
+    text-align: center;
+}
+
+.sdcm-menu-closed .sdcm-frame-menu-wrap .sdcm-three-menu-list {
+    display: block;
+}
+
+.sdcm-menu-closed .sdcm-frame-menu-btn {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    width: 50px;
+}
+
+.sdcm-menu-closed .sdcm-frame-personCenter {
+    width: 50px;
+    padding: 0px;
+}
+
+.sdcm-menu-closed .sdcm-frame-personCenter .dropdown-menu {
+    padding: 0px;
+}
+
+.sdcm-menu-closed .sdcm-frame-personCenter > .dropdown-toggle {
+    line-height: 50px;
+    text-align: center;
+}
+
+.sdcm-menu-closed .sdcm-frame-personCenter > .dropdown-toggle > img {
+    float: initial;
+    margin: 0;
+}
+
+.sdcm-menu-closed .sdcm-frame-personCenter > .dropdown-toggle > span {
+    display: none;
+}
+
+.sdcm-menu-closed .sdcm-frame-main {
+    width: calc(100% - 50px);
+    padding: 50px 0px 0px 50px;
+}
+
+/*系统弹窗提示*/
+.systemPrompt {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.systemInfo {
+    position: relative;
+    margin-top: 10px;
+    width: 280px;
+    height: 70px;
+    border-radius: 5px;
+    opacity: 0;
+}
+.systemInfo.err{
+    background-color: #ff4c4d;
+}
+.systemInfo.suc{
+    background-color: #fec200;
+}
+
+.systemIcon {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+.systemIcon .iconfont{
+    font-size: 42px;
+    color: #fff;
+}
+.systemMes {
+    margin-left: 70px;
+    color: #fff;
+    padding-top: 11px;
+    font-size: 14px;
+    width: 180px;
+    overflow: hidden
+}
+.systemMes.mesSuc{
+    line-height: 50px;
+    text-align: center;
+}
+.systemCha {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px;
+}
+.systemCha .iconfont{
+    font-size: 14px;
+    color: #fff;
+}

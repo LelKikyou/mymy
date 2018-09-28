@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/header_form :: header_form">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<script type="text/javascript" th:src="@{/js/global/jquery-md5.js}"></script>
+<style>
+    .userShow {
+        width: calc(100% - 100px);
+        margin: 5px 0 0 100px;
+        box-sizing: border-box;
+        height: 100px;
+        border: 1px solid #d8dee5;
+        font-size: 12px;
+        background-color: #f5f6f8;
+    }
+
+    .userPos {
+        display: none;
+        box-sizing: border-box;
+        border: 1px solid #d8dee5;
+        position: absolute;
+        top: 42px;
+        left: 100px;
+        width: calc(100% - 100px);
+        height: 106px;
+        background-color: #fff;
+    }
+
+    .showDom {
+        position: relative;
+        display: inline-block;
+        padding: 5px 20px 5px 15px;
+        background-color: #ffc200;
+        color: #fff;
+        font-size: 10px;
+        margin: 5px 0 0 5px;
+        border-radius: 8px;
+    }
+
+    .showDomIcon {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .userCheck {
+        cursor: pointer;
+    }
+
+    .userCheck > p {
+        text-align: center;
+        margin-top: -6px;
+    }
+
+    /*优化滚动条*/
+    .userShow > .mCSB_scrollTools_vertical {
+        right: -8px !important;
+    }
+</style>
+<body>
+<div class="sdcm-from">
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>用户名：</div>
+        <input id="username" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>密码：</div>
+        <input id="pwd" class="sdcm-col-input" type="text" readonly onfocus="this.removeAttribute('readonly');" isvalid="yes" checkexpession="NotNull">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>姓名：</div>
+        <input id="nickname" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="NotNull">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>性别：</div>
+        <select id="sex" class="sdcm-col-select" type="select">
+            <option value="0">女</option>
+            <option value="1" selected="selected">男</option>
+        </select>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">手机：</div>
+        <input id="mobile" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">座机：</div>
+        <input id="phone" class="sdcm-col-input" type="text">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>意见级别：</div>
+        <input id="oplevel" class="sdcm-col-input" type="text" isvalid="yes" checkexpession="level">
+    </div>
+    <div class="sdcm-col sdcm-col-6" style="height: 31px">
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>菜单角色：</div>
+        <div class="sdcm-col-input userCheck btMenu" data-bt="0" type="userMenuRole" isvalid="yes" checkexpession="NotNull">
+            <p>请点击选择</p>
+            <i class="iconfont  icon-xiangzuoxiangyou-copy" style="position: absolute;top: 20px;right: 6px;"></i>
+        </div>
+        <div class="userShow" id="linkMenuRoleList">
+            <div class="linkMenuRoleListBox">
+                <!--<div class="showDom">-->
+                <!--监狱领导-->
+                <!--<i class="iconfont icon-cha showDomIcon"></i>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="userPos linkMenuRoleList"></div>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">工作流角色：</div>
+        <div class="sdcm-col-input userCheck">
+            <p>请点击选择</p>
+            <i class="iconfont  icon-xiangzuoxiangyou-copy" style="position: absolute;top: 20px;right: 6px;"></i>
+        </div>
+        <div class="userShow" id="linkWfRoleList">
+            <div class="linkWfRoleListBox">
+
+            </div>
+        </div>
+        <div class="userPos linkWfRoleList"></div>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>所属部门：</div>
+        <div class="sdcm-col-control" id="unitFromtype" style="height: 31px;" isvalid="yes" checkexpession="NotNull"></div>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>所属职务：</div>
+        <div class="sdcm-col-control" id="positionFromtype" style="height: 31px;" isvalid="yes" checkexpession="NotNull"></div>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">兼职部门：</div>
+        <div class="sdcm-col-input userCheck">
+            <p>请点击选择</p>
+            <i class="iconfont  icon-xiangzuoxiangyou-copy" style="position: absolute;top: 20px;right: 6px;"></i>
+        </div>
+        <div class="userShow" id="linkUnitList">
+            <div class="linkUnitListBox">
+
+            </div>
+        </div>
+        <div class="userPos linkUnitList"></div>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title">兼职职务：</div>
+        <div class="sdcm-col-input userCheck">
+            <p>请点击选择</p>
+            <i class="iconfont  icon-xiangzuoxiangyou-copy" style="position: absolute;top: 20px;right: 6px;"></i>
+        </div>
+        <div class="userShow" id="linkPositionList">
+            <div class="linkPositionListBox">
+
+            </div>
+        </div>
+        <div class="userPos linkPositionList"></div>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title"><p>*</p>状态：</div>
+        <select id="enable" class="sdcm-col-select" type="select">
+            <option value="1" selected="selected">启用</option>
+            <option value="0">禁用</option>
+        </select>
+    </div>
+    <div class="sdcm-col sdcm-col-6">
+        <div class="sdcm-col-title" style="line-height: 20px;"><p>*</p>工作流角色是否生效：</div>
+        <select id="enablewf" class="sdcm-col-select" type="select">
+            <option value="0">有效</option>
+            <option value="1" selected="selected">无效</option>
+        </select>
+    </div>
+    <div class="sdcm-col sdcm-col-12">
+        <div class="sdcm-col-title">备注：</div>
+        <textarea id="remark" class="sdcm-col-control" style="height: 100px;margin-top: 5px"></textarea>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/js/system/jbsz/user/userForm.js}"></script>
+<div th:include="/common/footer :: footer"></div>
+</body>
+</html>
