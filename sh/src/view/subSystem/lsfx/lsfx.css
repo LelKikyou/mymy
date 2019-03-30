@@ -1,0 +1,192 @@
+.son-item:hover,.son-item.active{
+    background-color:rgba(241,203,45,.05);
+}
+.lsfx{
+    height: 100%;
+    padding-top: 2px;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    background: url('../../../assets/shzxjzpt/body_bg.png') no-repeat !important;
+    background-size: cover !important;
+    overflow: auto;
+    padding: 10px;
+    padding-bottom: 70px;
+}
+.s-title{
+    height:40px;
+    line-height:40px;
+    padding-left:20px;
+    border-bottom:1px solid #bdbdbd;
+}
+.s-title .s-span{
+    color:#fbd22c;
+    font-size: 16px;
+}
+.list{
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 976px;
+    border: 1px solid #a4b0bc;
+    border-radius: 4px;
+}
+.s-margin{
+    box-sizing: border-box;
+}
+.s-color{
+    background:rgba(0,0,0,0.3)
+}
+.unit{
+    height: 41px;
+    text-align: center;
+    line-height: 41px;
+    position: relative;
+    /*border-bottom: dashed 1px #bdbdbd;*/
+}
+.unit.active{
+    border-left:2px solid #f1cb2d;
+}
+.unit span{
+    font-size: 16px;
+}
+.unit i{
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('../../../assets/lsfx/icon-1.png') no-repeat;
+    top:9px;
+    left:21px;
+}
+.unit i.icon-2{
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('../../../assets/lsfx/icon-2.png') no-repeat;
+    top:9px;
+    left:21px;
+}.unit i.icon-3{
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('../../../assets/lsfx/icon-3.png') no-repeat;
+    top:9px;
+    left:21px;
+}
+
+.unit b{
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    background: url('../../../assets/lsfx/arrow-2.png') no-repeat;
+    top:11px;
+    right:11px;
+}
+.unit.active,.unit:hover{
+    background-color:rgba(241,203,45,.14);
+    cursor:pointer;
+}
+.unit.active b{
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 8px;
+    background: url('../../../assets/lsfx/arrow-1.png') no-repeat;
+    top:14px;
+    right:18px;
+}
+.son-item{
+    /*border-bottom: dashed 1px #2c4050;*/
+    height: 41px;
+    /*padding-left: 41px;*/
+    line-height: 41px;
+    position: relative;
+}
+.son-item span{
+    margin-left: 41px;
+}
+/*chart*/
+.chart{
+    float: left;
+    width:calc(100% - 580px)
+}
+.broken{
+    width: 100%;
+    height: 470px;
+    border-radius: 5px;
+    border: solid 1px #a4b0bc;
+    overflow:hidden;
+}
+.columnar{
+    width: 100%;
+    height: 504px;
+    border-radius: 5px;
+    border: solid 1px #a4b0bc;
+    margin-top: 2px;
+}
+.showAll{
+    width: 80px;
+    height: 20px;
+    border:1px solid #f1cb2d;
+    border-radius: 5px;
+    color: #fbd22c;
+    background: transparent;
+    line-height: 18px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.criminal{
+    position: relative;
+    width: 250px;
+    height: 976px;
+    float: left;
+    border: 1px solid #a4b0bc;
+    background: transparent;
+    border-radius: 4px;
+    overflow-y: auto;
+}
+/*people*/
+.peopleLists{
+    height: 80px;
+    line-height: 80px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.peopleLists:hover{
+    background-color: rgba(11,32,62,.2);
+}
+.peopleLists .item{
+    height: 80px;
+    border-bottom: dashed 1px #bdbdbd;
+}
+.peopleLists .item img{
+    width: 40px;
+    height: 60px;
+    margin-top: 10px;
+    float: left;
+}
+.peopleLists .item span{
+    color:#fff;
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    margin-left: 20px;
+}
+
+.line{
+    height: 0;
+    border-bottom: dashed 1px #bdbdbd;
+    margin: 0 10px;
+}
+.line-thin{
+    border-bottom: dashed 1px #2c4050;
+    height: 0;
+    margin: 0 10px;
+}

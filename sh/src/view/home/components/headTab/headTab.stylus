@@ -1,0 +1,112 @@
+.headTab
+  // width: 100%;
+  // height: 70px;
+  // background-color: #0d3c91;
+  .sub-nav
+    float: left;
+    height: 64px;
+    line-height 64px;
+    overflow: hidden;
+    margin:0 20px;
+    width: calc(100% - 700px);
+    position: relative;
+    box-sizing: border-box
+    // li
+    //   float: left;
+    //   font-size: 16px;
+    //   line-height: 64px;
+    //   padding:0 15px;
+    //   text-align: center;
+    //   cursor: pointer;
+    //   color: #fff;
+    // .active
+    //   background: #082140;
+
+// .sub-nav .ivu-tag {
+//     height: 100%;
+//     margin: 0;
+//     line-height: 59px;
+//     padding: 0 10px 0 30px;
+//     background-color: #09274b;
+//     border: none;
+//     border-right: 1px solid #747881;
+//     border-radius: 0;
+//     vertical-align: initial;
+// }
+
+// .sub-nav .ivu-tag:hover {
+//     background-color: #394d66;
+//     opacity: initial;
+// }
+
+// .sub-nav .ivu-tag.active {
+//     background-color: #394d66;
+// }
+
+// .sub-nav .ivu-tag .ivu-tag-text {
+//     color: #fff;
+//     font-size: 18px !important;
+// }
+
+// .sub-nav .ivu-tag .ivu-icon {
+//     color: #fff;
+//     font-size: 22px !important;
+//     margin-top: -4px;
+//     margin-left: 10px;
+// } 
+
+
+.headTab {
+    padding-left: 20px
+}
+
+.headTab > .left-btn {
+    cursor: pointer;
+    width: 30px;
+    height: 100%;
+    float: left;
+    // margin-left: 281px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.headTab > .left-btn:hover .btnIcon {
+    color: #fbd22c;
+}
+
+.headTab > .left-btn > .btnIcon {
+    color: #7f8c9f;
+    font-size: 30px;
+    line-height: 59px;
+    opacity: 0.7;
+}
+
+.headTab > .right-btn {
+    cursor: pointer;
+    width: 30px;
+    height: 100%;
+    float: left;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.headTab > .right-btn:hover .btnIcon {
+    color: #fbd22c;
+}
+
+.headTab > .right-btn > .btnIcon {
+    color: #7f8c9f;
+    font-size: 30px;
+    line-height: 59px;
+    opacity: 0.7;
+}
+.tabScroll {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    white-space: nowrap;
+    transition: left 0.2s ease-out;
+}
+
+.seachBox
+    float: left;
+    width: 247px;
+    margin: 0 22px;

@@ -1,0 +1,245 @@
+.sh-details{
+  height: 100%;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  min-width: 1650px;
+  background: url('../../../assets/shzxjzpt/body_bg.png') no-repeat !important;
+  background-size: cover !important;
+  overflow: auto;
+  padding: 10px;
+  padding-bottom: 70px;
+}
+
+.sh-sidebar{
+  width:320px;
+  border: 1px solid #a4b0bc;
+  border-radius: 4px;
+  height:850px;
+  padding: 10px;
+  float: left;
+  margin-right: 10px;
+}
+
+.d-content{
+  width: 100%;
+  height: 400px;
+  border: 1px solid #a4b0bc;
+  overflow-y: auto;
+  margin-top: 40px;
+  padding:15px;
+}
+
+.d-content .dc-item{
+  height: 25px;
+  cursor:pointer;
+  line-height: 25px;
+  padding-left: 10px;
+}
+.d-content .dc-item.active{
+  background: #2d8cf0;
+}
+
+.sh-rBox{
+  float: left;
+  width: 1310px;
+  border: 1px solid #a4b0bc;
+  /* margin-right: 10px; */
+  border-radius: 4px;
+  height:850px;
+  padding: 10px;
+}
+
+.judicialLogo{
+  float: left;
+  width: 490px;
+  height: 250px;
+}
+.judicialLogo img{
+  width: 100%;
+  height: 100%;
+}
+
+/* caseBox */
+.caseBox{
+  float: left;
+  margin-left: 10px;
+  height: 250px;
+  border: 1px solid #a4b0bc;
+}
+.caseItem{
+  width:786px;
+}
+
+.pArea{
+  width:100%;
+  height: 208px;
+  background: #0F254A;
+}
+.cNum{
+  padding-top: 10px;
+  width: 50%;
+  float: left;
+}
+.c-time{
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  background: #133F69;
+  margin-left: 90px;
+}
+
+.pBox{
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.peopleNum{
+  width: 50%;
+  float: left;
+}
+.peopleNum .c-tit{
+  font-size: 14px;
+  color: #fff;
+  opacity: .8;
+}
+.peopleNum .c-people{
+  font-size: 48px;
+  color: #fff;
+}
+.peopleNum .c-people span{
+  font-size: 14px;
+  color: #fbd22c;
+}
+
+.timeList{
+  margin-left: 50px;
+  overflow: hidden;
+}
+.timeList li{
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #fff;
+  opacity: .8;
+  padding: 5px;
+}
+.timeList li.active{
+  background: #133F69;
+  color: #fff;
+}
+
+.blockNum{
+  overflow: hidden;
+}
+
+.blockNum .b-item{
+  width:50%;
+  float: left;
+}
+.blockNum .b-item .b-people{
+  font-size: 28px;
+}
+.blockNum .b-item .b-people span{
+  font-size: 14px;
+  color: #fbd22c;
+  margin-left: 5px;
+}
+.blockNum .b-item .b-people b{
+  font-size: 14px;
+  opacity: .8;
+  margin-left: 5px;
+}
+
+
+.blockArea{
+  margin-top: 10px;
+}
+
+.bAitem{
+  width: 18%;
+  float: left;
+  margin-right: 1%;
+  text-align: center;
+  border:1px solid #1A3F66;
+  padding: 5px;
+}
+.bAitem span{
+  color:#3289D1;
+  font-size: 18px;
+}
+.bAitem p{
+  font-size: 14px;
+  opacity: .8;
+}
+
+/* r-mid */
+.r-top{
+  overflow: hidden;
+
+}
+.r-mid{
+  margin-top: 10px;
+  width: 100%;
+  height: 270px;
+  border: 1px solid #a4b0bc;
+  overflow: hidden;
+}
+
+
+/* r-bot */
+.r-bot{
+  margin-top: 10px;
+  width: 100%;
+  height: 290px;
+  border: 1px solid #a4b0bc;
+}
+
+/* peopleBox */
+.pb-item{
+  width: 120px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 1px solid #a4b0bc;
+  float: left;
+  transition: all .25s;
+  cursor: pointer;
+  position: relative;
+  top:0px;
+}
+.pb-item:hover{
+  position: relative;
+  top:-5px;
+}
+.pb-jq{
+  width: 118px;
+  height: 30px;
+  line-height: 30px;
+  /* border-radius: 5px; */
+  text-align: center;
+  background: #133F69;
+  margin-bottom: 10px;
+}
+.pb-name p{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  opacity: .8;
+}
+.attention{
+  font-size: 14px;
+  color: #fff;
+  /* opacity: .8; */
+}
+.attention span{
+  font-size: 28px;
+  color: #fff;
+  opacity: 1;
+  
+}
+.attention b{
+  opacity: .8;
+}

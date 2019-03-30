@@ -1,0 +1,41 @@
+.box-wrap
+  width: 100%
+  background:transparent
+  padding:20px
+  background: url('../../../assets/shzxjzpt/body_bg.png') no-repeat !important;
+  background-size: cover !important;
+  overflow: auto;
+  height: 100%;
+  padding-bottom: 70px;
+  .box-left
+    float:left
+    width:70%
+    height:100%
+    border:1px solid  #a4b0bc
+    .box-title
+      padding:20px
+      color:#fff
+    .mynetwork
+      width: 100%
+      height:calc(100% - 60px)
+  .box-right
+    float: left
+    width: calc(30% - 20px)
+    border: 1px solid #a4b0bc
+    margin-left: 20px
+    height: 100%
+    background-color: rgba(5,110,227,0.15);
+    padding: 10px 15px;
+
+
+.box-2 .detail-list {
+    padding-left: 2em;
+    line-height: 30px;
+} 
+.box-2 .detail-item {
+    color: #e5533b;
+    list-style: disc;
+}  
+.box-2 .detail-item span {
+    color: white;
+}

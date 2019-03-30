@@ -1,0 +1,40 @@
+.box-wrap
+  width: 100%
+  background:transparent
+  padding:20px
+  background: url('../../../assets/shzxjzpt/body_bg.png') no-repeat !important;
+  background-size: cover !important;
+  overflow: auto;
+  height: 100%;
+  padding-bottom: 70px;
+  .box-title
+    position: relative;
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size:14px
+    font-weight: 700;
+    color: #ffffff
+  .rank-container
+    position: absolute;
+    bottom: 10%;
+    right: 40px;
+    z-index: 5;
+    .total-title
+      color:#fff;
+      font-size:16px
+      margin:10px 0
+    .rank-title
+      color: white;
+      font-size: 18px;
+      margin-bottom:5px
+    .rank-list
+      color: #fff;
+      list-style: decimal;
+      padding-left: 1em;
+      font-size:14px
+      .rank-item
+        list-style: decimal;
+        line-height: 35px;
+        .item-count
+          margin-left:25px
