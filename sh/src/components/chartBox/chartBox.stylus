@@ -1,7 +1,0 @@
-.chartBox
-  padding:20px
-  .title
-    color:#3cf868
-  .chart-wrap
-    width: 100%
-    height:240px
