@@ -1,0 +1,15 @@
+.leftBottom
+  width 388px
+  height 270px
+  background url("../../../../assets/left_b.png") no-repeat
+  background-size 100% 100%
+  padding 12px
+  .content
+    position relative
+    width 100%
+    height calc(100% - 40px)
+    .chart
+      position absolute
+      left 0
+      top 0
+      z-index 1

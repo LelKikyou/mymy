@@ -1,0 +1,48 @@
+.midTop
+  position relative
+  width 100%
+  height 650px
+  background url("../../../../assets/guang.png") no-repeat
+  background-position-y bottom
+  background-size 100%
+  .boxTitle
+    position absolute
+    left 0
+    top 0
+    padding: 10px 0 10px 20px;
+    z-index 10
+    width 180px
+    height 80px
+    background url("../../../../assets/board.png") no-repeat
+    background-size 100% 100%
+    .t
+      margin-top: 12px;
+      font-size 18px
+      color #fff
+    .m
+      font-size 14px
+      color #fff
+      letter-spacing: 1px
+  .back
+    border-radius: 2px;
+    border 1px solid #3259aa
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0;
+    left: 3px;
+    top: 80px;
+    z-index: 10;
+    color #fff
+    background-color: #0c3b7c;
+    cursor: pointer;
+    &:hover
+      background-color #034a98
+    & i
+      margin 0 10px
+      vertical-align middle
+      font-size 16px
+    & span
+      vertical-align middle
+      font-size 14px

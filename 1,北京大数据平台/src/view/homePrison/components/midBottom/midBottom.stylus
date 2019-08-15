@@ -1,0 +1,72 @@
+.midBottom
+  padding 14px 12px
+  width 100%
+  height 270px
+  background url("../../../../assets/bot.png") no-repeat
+  background-size 100% 100%
+  .midCon
+    position relative
+    width 100%
+    height 208px
+    padding-bottom 8px
+    .zfMax
+      position absolute
+      top -36px
+      right 28px
+      font-size 16px
+      color #fff
+      & b
+        color #00d3ff
+        letter-spacing:0.4px
+    .zfContent
+      width 100%
+      overflow auto
+      .nav
+        padding-left 20px
+        width 100%
+        min-width 600px
+        height 30px
+        line-height 30px
+        font-size 14px
+        color #fff
+        .tit
+          float left
+        .navCon
+          list-style none
+          margin-left 10px
+          & li
+            margin-right 20px
+            float left
+            color #ccc
+            cursor pointer
+          .active
+            color #02d2ff
+      .charts
+        min-width 600px
+        width 100%
+        height 170px
+  .midContent
+    width 100%
+    height 208px
+    padding-bottom 8px
+    overflow auto
+  .scrollbar:hover::-webkit-scrollbar
+    display block
+  .scrollbar::-webkit-scrollbar
+    display none
+    width: 6px;
+    background-color: #060E4B;
+    height: 6px;
+  .scrollbar::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    background-color: #060E4B;
+    border-radius: 6px;
+    height: 6px;
+  .scrollbar::-webkit-scrollbar-thumb
+    border-radius: 6px;
+    height: 6px;
+    background-color: #060E4B;
+    background-image: -webkit-gradient(linear, 40% 0, 75% 84%, from(#6394E3), to(#6394E3), color-stop(.6, #6394E3));
+  .content
+    min-width 1280px
+    height 100%

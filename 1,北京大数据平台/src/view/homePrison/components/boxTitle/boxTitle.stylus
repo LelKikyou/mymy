@@ -1,0 +1,9 @@
+.boxTitle
+  width 100%
+  line-height: 32px;
+  height 40px
+  font-size: 16px;
+  background url("../../../../assets/box_title.png") no-repeat
+  background-size 100% 100%
+  color #fff
+  padding-left 15px

@@ -1,0 +1,39 @@
+.leftTop
+  padding 12px
+  width 388px
+  height 650px
+  background url("../../../../assets/left_a.png") no-repeat
+  background-size 100% 100%
+  .conList
+    width 100%
+    height 240px
+    padding 0 20px
+    list-style none
+    .list
+      height: 80px;
+      border-bottom: 1px dashed #335ba0;
+      padding-top: 8px;
+      & > div
+        width 100%
+        height 34px
+        line-height 20px
+        & i
+          vertical-align middle
+          color: #00d2ff;
+          font: normal normal normal 18px / 1 FontAwesome;
+        & .mid
+          vertical-align middle
+        .v
+          font: bold 22px / 34px "microsoft yahei";
+          color: #00d2ff;
+        .d
+          margin-left 5px
+          color: #fff;
+          font-size: 14px;
+        .k
+          margin-left 6px
+          color: #fff;
+          font-size: 14px;
+    .botList
+      width: 50%
+      float: left
