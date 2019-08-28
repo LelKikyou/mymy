@@ -1,0 +1,15 @@
+.boxTitle
+  width 100%
+  height 26px
+  margin-top 22px
+  padding-left 40px
+  line-height 26px
+  font-size 0
+  & img
+    vertical-align: middle;
+  & span
+    margin-left 10px
+    vertical-align middle
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #38acff;

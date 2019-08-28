@@ -1,0 +1,50 @@
+[
+  {
+    "type": "get",
+    "url": "/login",
+    "title": "获取用户信息",
+    "description": "<p>获取用户信息</p>",
+    "name": "login",
+    "group": "Login",
+    "sampleRequest": [
+      {
+        "url": "http://localhost:7777/api/sdcm/login"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "routes/controller/login.js",
+    "groupTitle": "Login"
+  },
+  {
+    "type": "get",
+    "url": "/nationList",
+    "title": "获取全国",
+    "description": "<p>获取全国</p>",
+    "name": "nationList",
+    "group": "homePrison",
+    "sampleRequest": [
+      {
+        "url": "http://localhost:8888/api/sdcm/homePrison/nationList"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "routes/controller/homePrison.js",
+    "groupTitle": "homePrison"
+  },
+  {
+    "type": "get",
+    "url": "/provinceList",
+    "title": "获取各省",
+    "description": "<p>获取各省</p>",
+    "name": "provinceList",
+    "group": "homePrison",
+    "sampleRequest": [
+      {
+        "url": "http://localhost:8888/api/sdcm/homePrison/provinceList"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "routes/controller/homePrison.js",
+    "groupTitle": "homePrison"
+  }
+]

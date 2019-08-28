@@ -1,0 +1,111 @@
+.right
+  float left
+  padding 0 13px
+  width 432px
+  height 934px
+  background url("../../../../assets/nation/right.png")
+  background-size 100% 100%
+  .top
+    margin 0 auto
+    width 100%
+    height 340px
+    border-bottom 1px dotted #4f9efa
+    overflow hidden
+    .content
+      width 100%
+      height calc(100% - 48px)
+      overflow hidden
+      .nav
+        list-style none
+        margin-top 14px
+        width 100%
+        height 34px
+        border 2px solid #4f9efa
+        .active
+          background-color #0081cc
+          & p
+            color #fff
+        & li
+          float left
+          height 100%
+          cursor pointer
+          & p:hover
+            color #fff
+          & p
+            position relative
+            padding 0 12px
+            margin-top 7px
+            line-height 20px
+            text-align center
+            width 100%
+            height 20px
+            font-size: 16px;
+            letter-spacing: 1px;
+            color #aabbcc
+          & p:after
+            content: "";
+            width: 2px;
+            height: 20px;
+            background: #fff;
+            position: absolute;
+            left: -1px;
+            top: 0;
+        & li:first-child p:after
+          display none
+      .chart
+        height calc(100% - 48px)
+  .mid
+    width 100%
+    height 256px
+    overflow hidden
+    border-bottom 1px dotted #4f9efa
+    .content
+      width 100%
+      height calc(100% - 34px)
+      overflow hidden
+  .bot
+    width 100%
+    height 338px
+    overflow hidden
+    .content
+      width 100%
+      height calc(100% - 34px)
+      overflow hidden
+      padding-top 22px
+      .tit
+        background-color: rgba(55,148,229,0.6);
+        & div
+          font-family: MicrosoftYaHei-Bold;
+          font-size: 14px;
+          line-height: 33px;
+          letter-spacing: 1px;
+          color: #fff;
+      .con
+        width 100%
+        height 33px
+        text-align center
+        .criminalName
+          float left
+          width 100px
+          height 100%
+        .prisonName
+          float left
+          width 206px
+          height 100%
+        .eventType
+          float left
+          width 100px
+          height 100%
+      .swiper-container
+        width 100%
+        height 231px
+        .swiper-slide div
+          font-size: 14px;
+          line-height: 33px;
+          letter-spacing: 1px;
+          color: #fff;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+
