@@ -1,0 +1,5 @@
+.aLawEnfTopLeft
+  width 100%
+  height calc(100% - 130px)
+  .chart
+    height : 50%

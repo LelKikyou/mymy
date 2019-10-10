@@ -1,0 +1,32 @@
+.pubLSTopRight
+    background url("../../../../assets/publicLegalServices/chilun.png") no-repeat 30px 2px;
+    position relative
+    .coord_0
+        position: absolute
+        top: 57px;
+        left: 77px;
+    .coord_1
+        position: absolute
+        top: 152px;
+        left: 216px;
+    .coord_2
+        position: absolute
+        top: 57px;
+        left: 345px;
+    .coord_3
+        position: absolute
+        top: 152px;
+        left: 481px;
+    .notaryArea
+        text-align: center
+        float left
+        .notaryName
+            font-size: 14px
+            color: #fff
+            line-height: 1
+            margin-bottom: 10px
+        .notaryValue
+            font-size: 24px    
+            color: #00ffff
+            font-family: Impact;
+            line-height: 1

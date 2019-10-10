@@ -1,0 +1,20 @@
+.peoMedLeft
+  float left
+  margin-left 20px;
+  width 440px
+  height 950px
+  background url("../../../../../../assets/criminalExecution/right.png") no-repeat
+  background-size 100% 100%
+  .nav
+    padding: 0 30px
+    margin-top: 20px
+    margin-bottom: 5px
+  .leftTop
+    width: 100%;
+    height: 224px;
+  .leftMid
+    width 100%
+    height: 228px;
+  .leftBot
+    width 100%
+    height: 298px;

@@ -1,0 +1,16 @@
+.judExpLeft
+  float left
+  margin-left 20px
+  width 440px
+  height 950px
+  background url("../../../../../../assets/publicLegalServices/left.png") no-repeat
+  background-size 100% 100%
+  .nav
+    padding: 0 30px
+    margin-top: 20px
+    margin-bottom: 5px
+  .leftTop
+    height 298px
+  .leftMid
+    width 100%
+    height 498px

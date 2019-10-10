@@ -1,0 +1,23 @@
+.midTop
+  position relative
+  width 100%
+  height 644px
+  .boxTitle
+    position absolute
+    left 0
+    top 0
+    padding: 18px 0 10px 20px;
+    z-index 10
+    width 180px
+    height 90px
+    background url("../../../../../../assets/criminalExecution/board.png") no-repeat
+    background-size 100% 100%
+    .t
+      margin-top: 10px;
+      font-size 18px
+      color #fff
+    .m
+      margin-top 10px
+      font-size 14px
+      color #fff
+      letter-spacing: 1px

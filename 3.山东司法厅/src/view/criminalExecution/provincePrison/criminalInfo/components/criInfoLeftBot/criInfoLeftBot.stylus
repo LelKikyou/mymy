@@ -1,0 +1,35 @@
+.criInfoLeftBot
+  margin-top 20px
+  width 100%
+  height 734px
+  overflow hidden
+  .lCon
+    float left
+    width 430px;
+    height 100%
+    background url("../../../../../../assets/criminalExecution/leftlower-b.png") no-repeat
+    background-size 100% 100%
+    .timeLine
+      width 100%
+      height calc(100% - 46px)
+      padding 20px
+  .rCon
+    margin-left 20px
+    float left
+    width 940px;
+    height 100%
+    .conTop
+      width 100%
+      height 357px
+      background url("../../../../../../assets/criminalExecution/center.png") no-repeat
+      background-size 100% 100%
+      .chart
+        height: 310px;
+    .conBot
+      margin-top 20px
+      width 100%
+      height 357px
+      background url("../../../../../../assets/criminalExecution/center.png") no-repeat
+      background-size 100% 100%
+      .chart
+        height: 310px;

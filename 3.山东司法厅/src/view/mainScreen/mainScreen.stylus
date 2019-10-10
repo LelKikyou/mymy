@@ -1,0 +1,45 @@
+.mainScreen
+  width 1920px
+  height 1080px
+  .img
+    margin: 0 24px
+  .btn-right, .btn
+    float right
+    display inline-block
+    margin-right 28px
+  .btn-left, .btn
+    padding-left 28px
+  .btn
+    overflow hidden
+    & div:nth-child(1)
+      margin-right 54px
+    & div
+      float left
+      width 226px
+      height 74px
+      font-size: 18px;
+      font-weight bold
+      background url("../../assets/mainScreen/button.png") no-repeat
+      background-size cover
+      text-align center
+      line-height 74px
+      cursor pointer
+      &:hover
+        background url("../../assets/mainScreen/button_checked.png") no-repeat
+  .content
+    width 100%
+    padding-top 32px
+    overflow hidden
+    .left
+      float left
+      width 536px
+      margin-left 20px
+    .mid
+      float left
+      width 768px
+      margin-left 20px
+    .right
+      float left
+      width 536px
+      margin-left 20px
+

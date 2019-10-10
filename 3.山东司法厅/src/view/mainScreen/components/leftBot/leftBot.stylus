@@ -1,0 +1,14 @@
+.leftBot
+  width 100%
+  height 474px
+  background url("../../../../assets/mainScreen/leftlower.png") no-repeat
+  background-size 100% 100%
+  position relative
+  .charts
+    width: 532px;
+    height: 372px;
+  .caseBox
+    font-size: 14px
+    position: absolute
+    bottom 10px
+    left 205px

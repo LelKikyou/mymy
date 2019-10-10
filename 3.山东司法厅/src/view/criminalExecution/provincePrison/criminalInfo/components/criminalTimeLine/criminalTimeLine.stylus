@@ -1,0 +1,88 @@
+.criminalTimeLine
+  width 100%
+  height 100%
+  .scrollTop
+    width 100%
+    height 28px
+    & i
+      font-size 15px
+      line-height 28px
+      float right
+      color #1fdfe9
+      cursor pointer
+  .content
+    width 100%
+    height calc(100% - 38px)
+    margin-top 10px
+    overflow auto
+    .lineItem.lineItemRight .lineDeeds
+      text-align left
+      padding-left 26px
+      padding-right 0
+    .lineItem.lineItemRight .lineTime
+      padding-left 0
+      padding-right 26px
+      .timeImg
+        background url("../../../../../../assets/criminalExecution/arrowRight.png") no-repeat
+    .lineItem
+      position relative
+      padding 20px 0
+      margin-bottom 1px
+      width 360px;
+      overflow hidden
+      &:after
+        position: absolute;
+        content: "";
+        display: inline-block;
+        height: 100%;
+        left: 50%
+        transform translateX(-50%)
+        top: 0;
+        border-right: 2px dotted #1fdfe9;
+        z-index 0
+      .lineDeeds
+        padding-right 26px
+        float left
+        width 50%
+        text-align right
+        .name
+          width 100%
+          letter-spacing: 1px;
+          color: #68f1ff;
+          font-size: 16px;
+        .details
+          width 100%
+          margin-top 10px
+          letter-spacing: 1px;
+          color: #ffffff;
+          font-size 14px
+      .lineTime
+        padding-left 26px
+        float left
+        width 50%
+        padding-top 5px
+        .timeImg
+          width 150px
+          height 30px
+          background url("../../../../../../assets/criminalExecution/arrowLeft.png") no-repeat
+          background-size 100% 100%
+          line-height 30px;
+          text-align center
+          font-size: 14px;
+          color #fff
+          letter-spacing: 1px;
+      .lineIcon
+        position absolute
+        top 20px
+        left 50%
+        transform translateX(-50%)
+        background url("../../../../../../assets/criminalExecution/ball.png") no-repeat
+        background-size 100% 100%
+        background-color #011c31
+        width 40px;
+        height 40px
+        z-index 1
+        text-align center
+        line-height 40px;
+        & i
+          font-size 14px

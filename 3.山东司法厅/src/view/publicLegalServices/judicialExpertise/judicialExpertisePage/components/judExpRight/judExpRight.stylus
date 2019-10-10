@@ -1,0 +1,47 @@
+.judExpRight
+  position relative
+  float left
+  margin-left 20px;
+  width 440px
+  height 950px
+  background url("../../../../../../assets/criminalExecution/right.png") no-repeat
+  background-size 100% 100%
+  .rightTop
+    width: 100%;
+    height: 284px;
+  .rightMid
+    width 100%
+    height: 228px;
+  .rightBot
+    width 100%
+    height: 298px;
+  .botList
+    position absolute
+    left: 39px;
+    top: 395px;
+    .list
+      margin-bottom: 6px
+    .line
+      position: relative;
+      left: 80px;
+      top: -8px;
+      width 100px
+      height 1px
+    .cir
+      font-size: 14px
+    .list_0
+      left: 80px;
+      top: 88px
+      .line
+        background: #177dff;
+    .list_1
+      left: 146px;
+      top: 68px;
+      .line
+        background:#08ff56;
+    .list_2
+      left: 202px;
+      top: 20px;
+      .line
+        background:#01fecf;
+

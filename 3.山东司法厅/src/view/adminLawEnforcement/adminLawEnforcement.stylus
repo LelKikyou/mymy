@@ -1,0 +1,100 @@
+.adminLawEnforcement
+  width 1920px
+  height 1080px
+  .content
+    width 100%
+    padding-top 20px
+    overflow hidden
+    .slice
+      overflow hidden
+      width 158px
+      height 75px
+      background url("../../assets/publicLegalServices/changyoupiao.png") no-repeat
+      background-size 100% 100%
+      .name
+        margin-top 10px
+        text-align center
+        line-height 1
+        font-size 16px;
+        color: #00c8ff;
+        width 100%
+      .num
+        margin-top 6px
+        color: #00ffff;
+        width 100%
+        font-family: Impact;
+        text-align center
+        line-height 1
+        font-size 36px;
+    .conTop
+      float left
+      margin-left 20px
+      width 614px
+      height 560px
+      background url("../../assets/adminLawEnforcement/frame.png") no-repeat
+      background-size 100% 100%
+      .pointName
+        overflow hidden
+        margin-top 20px
+        .slice
+          margin-left 10px
+          float left
+          &:nth-child(1)
+            margin-left 11px
+      &:nth-child(1)
+        position relative
+        .titleNameOth
+          width 200px
+          background url("../../assets/adminLawEnforcement/title1.png") no-repeat
+          background-size 100% 100%
+        .edit
+          position absolute
+          top 6px
+          right 0
+          color #00c8ff
+          font-size: 28px;
+          line-height: 1;
+          cursor pointer
+        .slice
+          width 140px
+      &:nth-child(2)
+        .titleNameOth
+          width 100px
+        .slice
+          width 190px
+      &:nth-child(3)
+        .slice
+          width 290px
+    .conBot
+      position relative
+      float left
+      width 930px
+      height 370px
+      margin 20px 0 0 20px
+      background url("../../assets/adminLawEnforcement/leftlower.png") no-repeat
+      background-size 100% 100%
+      .botLeft
+        float left
+        width 230px
+        height calc(100% - 46px)
+        padding 12px 0 0 28px
+        .slice
+          margin-top 16px
+      .botRight
+        float left
+        width calc(100% - 230px)
+        height calc(100% - 46px)
+      &:nth-child(4)
+        .titleNameOth
+          width 260px
+          background url("../../assets/adminLawEnforcement/title4.png") no-repeat
+          background-size 100% 100%
+      &:nth-child(5)
+        .titleNameOth
+          width 240px
+          background url("../../assets/adminLawEnforcement/title5.png") no-repeat
+          background-size 100% 100%
+      .titleNameOth
+        position absolute
+        top 74px
+        left 230px

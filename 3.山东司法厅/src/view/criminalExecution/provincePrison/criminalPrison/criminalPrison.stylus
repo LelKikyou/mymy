@@ -1,0 +1,13 @@
+.criminalPrison
+  .left
+    float left
+    width 442px
+    margin-left 20px
+  .mid
+    float left
+    width 956px
+    margin-left 20px
+  .rightName
+    float left
+    width 442px
+    margin-left 20px

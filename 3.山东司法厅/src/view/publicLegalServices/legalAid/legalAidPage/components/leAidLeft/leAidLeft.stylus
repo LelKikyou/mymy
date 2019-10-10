@@ -1,0 +1,32 @@
+.leAidLeft
+  float left
+  margin-left 20px;
+  width 440px
+  height 950px
+  background url("../../../../../../assets/criminalExecution/right.png") no-repeat
+  background-size 100% 100%
+  position relative
+  .leftTop
+    width: 100%;
+    height: 284px;
+  .leftMid
+    width 100%
+    height: 228px;
+  .leftBot
+    width 100%
+    height: 298px;
+  .botList
+    position absolute
+    bottom: 262px;
+    left: 168px;
+    .list
+      position absolute
+      border-top: 2px solid
+      border-left: 2px solid
+      .num
+        position: absolute;
+        font-size: 14px;
+        right: -122px;
+        top: -10px;
+        width: 120px;
+        height: 16px;

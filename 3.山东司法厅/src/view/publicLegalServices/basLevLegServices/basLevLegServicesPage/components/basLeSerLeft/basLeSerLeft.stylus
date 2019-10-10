@@ -1,0 +1,43 @@
+.basLeSerLeft
+  float left
+  margin-left 20px;
+  width 440px
+  height 950px
+  background url("../../../../../../assets/criminalExecution/right.png") no-repeat
+  background-size 100% 100%
+  .leftTop
+    width: 100%;
+    height: 284px;
+    overflow: hidden;
+    .leftMidC
+      height: 122px;
+    .iconBox
+      overflow hidden
+      margin: 40px auto 0 auto
+      width: 218px
+      .iconItem:first-child
+        margin-right: 30px
+      .iconItem
+        float left
+        text-align: center
+        p
+          font-size: 16px
+          color: #fff
+          margin-top: 10px;
+      .cir
+        width:94px;
+        height 94px;
+        border-radius: 50%
+        text-align: center
+        img 
+          margin-top: 10px;
+      .man
+        border:1px solid #177dff  
+      .woman
+        border:1px solid #ff6360   
+  .leftMid
+    width 100%
+    height: 228px;
+  .leftBot
+    width 100%
+    height: 298px;

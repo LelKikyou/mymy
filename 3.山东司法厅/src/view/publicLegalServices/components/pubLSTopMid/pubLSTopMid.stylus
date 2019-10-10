@@ -1,0 +1,35 @@
+.pubLSTopMid
+    .iconArea
+        overflow hidden
+        .iconItem
+            width: 191px;
+            height: 47px;
+            line-height 47px;
+            float left;
+            margin-top: 10px;
+            margin-left: 10px;
+            position: relative;
+            background url("../../../../assets/publicLegalServices/kejigan.png") no-repeat
+            .color_0
+                color:#ff6261
+            .color_1
+                color:#fffc00;
+            .color_2
+                color:#4ed643;
+            span
+                vertical-align middle
+                font-size: 12px
+                margin: 0 3px;
+            b
+                vertical-align middle
+                font-family: Impact;
+                font-size: 24px;
+            .iconfont
+                vertical-align middle
+                font-size: 26px;
+                margin: 0px 5px;
+    .chartArea
+        height: 215px;
+        .chart
+            float left
+            width: 50%  

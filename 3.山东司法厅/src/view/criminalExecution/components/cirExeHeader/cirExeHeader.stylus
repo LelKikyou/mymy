@@ -1,0 +1,96 @@
+.cirExeHeader
+  width 100%
+  height 76px
+  overflow hidden
+  position relative
+  .tit
+    float left
+    width 105px
+    height 100%
+    border-right 2px solid #00ffff
+    text-align center
+    line-height 76px
+    font-size 32px;
+    color #fff
+    font-weight bold
+  .icon
+    float left
+    width 76px
+    height 76px
+    background url("../../../../assets/criminalExecution/circle.png") no-repeat
+    background-size 100% 100%
+    text-align center
+    line-height 76px
+    & i
+      font-size 15px
+  .dataNum
+    margin-left 6px
+    float left
+    width 140px
+    height 100%
+    line-height 1
+    & p:nth-child(1)
+      padding-top 8px
+      font-size: 40px;
+      color: #fffc00;
+      letter-spacing: 2px;
+      font-family: Impact;
+    & p:nth-child(2)
+      padding-top 4px
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 1px;
+  .cut
+    float left
+    width 100px
+    height 100%
+    line-height 1
+    padding-top 22px
+    .cutImg
+      width 100%
+      color: #ff4a29;
+      font-size 0
+      & span
+        vertical-align top
+        font-size 14px
+      & img
+        margin-left 16px
+        vertical-align top
+        height 14px
+    .cutName
+      margin-top 8px
+      letter-spacing: 1px;
+      color: #ff4a29;
+      font-size 14px
+      font-weight bold
+  .lastMonthNum
+    float left
+    width 180px;
+    height 100%
+    & div
+      padding-top 2px
+      line-height 1
+      & span:nth-child(1)
+        letter-spacing: 1px;
+        font-size 16px;
+      & span:nth-child(2)
+        margin-left 8px
+        font-family: Impact;
+        font-size: 30px;
+        letter-spacing: 2px;
+        color: #00ffd0;
+    .out
+      padding-top 6px
+      & span:nth-child(2)
+        color: #00ff55;
+  .edit
+    cursor pointer
+    position absolute
+    top 50%
+    right 0
+    transform translateY(-50%)
+    z-index 1
+    & i
+      font-size 30px
+    &:hover
+      opacity 0.8

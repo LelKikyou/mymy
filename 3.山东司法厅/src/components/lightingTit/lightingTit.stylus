@@ -1,0 +1,32 @@
+.lightingTit
+  position absolute
+  left 50%
+  top 0
+  transform translateX(-50%)
+  height 74px
+  white-space: nowrap;
+  .itemTit
+    display inline-block
+    width 220px
+    height 100%
+    .iconImg
+      float left
+      width 74px
+      height 100%
+      line-height 72px
+      background url("../../assets/criminalExecution/circle.png") no-repeat
+      background-size 100% 100%
+      text-align center
+      & i
+        font-size 26px
+        margin-left 4px
+    .nameNum
+      float left
+      .num
+        font-family: Impact;
+        font-size: 40px;
+        letter-spacing: 2px;
+        color: #fffc00;
+      .name
+        letter-spacing: 1px;
+        font-size 16px

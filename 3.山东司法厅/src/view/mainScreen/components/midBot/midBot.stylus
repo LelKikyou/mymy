@@ -1,0 +1,13 @@
+.midBot
+  width 100%
+  height 760px
+  background url("../../../../assets/mainScreen/mapframe.png") no-repeat
+  background-size 100% 100%
+  .topBox
+    padding 6px;
+    width 100%;
+    height 500px
+  .botBox
+    padding 6px;
+    width 100%
+    height 260px

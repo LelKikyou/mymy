@@ -1,0 +1,71 @@
+.leftTop
+  float left
+  margin-left 10px
+  width 1340px
+  height 100%
+  background url("../../../../../../assets/criminalExecution/frame-big.png") no-repeat
+  background-size 100% 100%
+  position relative
+  .topArea
+    overflow hidden
+    .prisonName
+      font-size: 32px;
+      letter-spacing: 6px;
+      color: #ffffff;
+      font-weight: bold;
+      position: absolute
+      left:60px;
+      top:25px;
+    .cardArea
+      margin-top: 10px;
+      margin-left: 290px
+      .cardItem
+        width: 226px;
+        height: 75px;
+        float left;
+        margin-left: 30px
+        background url("../../../../../../assets/criminalExecution/box2.png") no-repeat
+        text-align: center
+        padding-top: 5px
+        .cIname
+          font-size: 16px;
+          line-height: 30px;
+          color: #00c8ff;
+        .cIvalue
+          font-size: 30px;
+          line-height: 30px;
+          color: #00ffff;
+          font-weight: bold;
+  .botArea
+    padding-left: 10px
+    overflow hidden
+    margin-top: 10px
+    .iconItem
+      width: 307px;
+      height: 78px;
+      line-height 78px
+      float left;
+      margin-left: 19px
+      position: relative;
+      background url("../../../../../../assets/criminalExecution/box1.png") no-repeat
+      .color_0
+        color:#ff6261
+      .color_1
+        color:#177dff;
+      .color_2
+        color:#fffc00;
+      .color_3
+        color:#4ed643;
+      span
+        vertical-align middle
+        font-size: 16px
+        margin-left: 10px;
+        margin-right: 25px
+      b
+        vertical-align middle
+        font-family: Impact;
+        font-size: 36px;
+      .iconfont
+        vertical-align middle
+        font-size: 20px;
+        margin: 0 24px;

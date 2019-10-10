@@ -1,0 +1,30 @@
+.criminalFiles
+  padding 0 20px
+  .criFileTop
+    width 100%
+    height 190px
+  .criFilesNav
+    margin-top 20px
+    width 100%
+    height 44px
+    overflow hidden
+    & > div
+      margin-left 18px
+      line-height 44px
+      float left
+      padding 0 66px
+      height 100%
+      background url("../../../../assets/criminalExecution/filsBtn.png") no-repeat
+      background-size 100% 100%
+      cursor pointer
+      &:hover
+        background url("../../../../assets/criminalExecution/filBtn_checked.png") no-repeat
+      &:nth-child(1)
+        margin-left 0
+    .active
+      background url("../../../../assets/criminalExecution/filBtn_checked.png") no-repeat
+  .criFileBot
+    margin-top 20px
+    width 100%
+    height 670px
+    overflow hidden

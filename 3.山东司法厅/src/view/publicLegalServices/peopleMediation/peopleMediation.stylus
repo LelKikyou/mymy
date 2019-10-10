@@ -1,0 +1,7 @@
+.peopleMediation
+  width 1920px
+  height 1080px
+  .content
+    width 100%
+    padding-top 20px
+    overflow hidden

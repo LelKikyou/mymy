@@ -1,0 +1,17 @@
+.aLegislationMid
+  width 100%
+  height 840px
+  .aLegTop, .aLegBot
+    width 100%
+    height 410px
+    background url("../../../../assets/adminLegislation/leftcentre.png") no-repeat
+    background-size 100% 100%
+  .aLegTop
+    .topCharts
+      width 100%
+      height calc(100% - 46px)
+  .aLegBot
+    margin-top 20px
+    .botCharts
+      width 100%
+      height calc(100% - 46px)

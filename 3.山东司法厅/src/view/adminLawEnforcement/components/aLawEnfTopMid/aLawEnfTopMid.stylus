@@ -1,0 +1,6 @@
+.aLawEnfTopMid
+  width 100%
+  height calc(100% - 130px)
+  .chart
+    width: 50%
+    float left

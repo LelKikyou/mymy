@@ -1,0 +1,94 @@
+.workBench
+  width 1920px
+  height 1080px
+  background url("../../assets/criminalExecution/bj.jpg") no-repeat
+  background-size 100% 100%
+  overflow hidden
+  .img
+    margin-right 10px
+  .content
+    width 100%
+    height calc(100% - 90px)
+    .map
+      margin 60px auto 0
+      padding-top 170px
+      width 1140px
+      height 628px
+      background url("../../assets/login/map.png") no-repeat
+      background-size 100% 100%
+      position relative
+      .swiperBox
+        position absolute
+        width 1340px
+        height 400px;
+        left -100px
+        top 160px
+        border-radius 178px
+        .swiperCon.swiper-slide-active .item
+          color #fff
+        .swiperCon
+          padding-top 160px
+          height 500px
+          text-align center
+          cursor pointer
+          .item
+            margin 0 auto
+            width 240px
+            height 238px
+            background url("../../assets/login/select.png") no-repeat
+            background-size 100% 100%
+            overflow hidden
+            color #00ffff
+            & i
+              margin-top 48px
+              display block
+              font-size 86px
+            & p
+              font-size 20px
+    .cut
+      position relative
+      margin-top 50px
+      width 100%
+      height 70px
+      .navCut
+        position absolute
+        height 100%
+        top 0
+        left 50%
+        transform translateX(-50%)
+        background url("../../assets/login/tab.png") no-repeat
+        background-size 100% 100%
+        white-space: nowrap;
+        font-size 0
+        li
+          display inline-block
+          width 256px
+          text-align center
+          line-height 70px
+          font-size 24px
+          letter-spacing: 1px;
+          color: #00ffff;
+          position relative
+          cursor pointer
+          &:hover
+            color: #fff;
+          &:last-child:after, &:before
+            position absolute
+            top 0
+            right -2px
+            content ""
+            display inline-block
+            width 6px
+            height 100%
+            background url("../../assets/login/shu.png") no-repeat
+            background-size 100% 100%
+          &:before
+            left -2px
+        &.fade-leave-active, &.fade-enter-active {
+          transition: all 0.3s ease;
+        }
+
+        &.fade-enter, &.fade-leave-to {
+          top 30px
+          opacity: 0;
+        }

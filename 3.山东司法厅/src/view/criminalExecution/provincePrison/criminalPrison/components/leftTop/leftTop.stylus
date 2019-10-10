@@ -1,0 +1,72 @@
+.leftTop
+  width 100%
+  height 644px
+  background url("../../../../../../assets/criminalExecution/leftup.png") no-repeat
+  background-size 100% 100%
+  overflow hidden
+  .content
+    padding 4px 20px 0
+    width 100%
+    .content-list
+      width 100%
+      list-style none
+      overflow hidden
+    .list
+      width calc(50% - 1px)
+      margin-left 1px
+      height 74px
+      float left
+      border-bottom: 1px dotted #4f9efa;
+      padding: 12px 10px 12px 22px;
+      .tit
+        height 18px
+        line-height 18px
+        font-size 0
+        .cir
+          vertical-align middle
+          display inline-block
+          width 6px
+          height 6px
+          border-radius 50%
+          background-color: #00c8ff;
+          margin-right 8px
+        .name
+          vertical-align middle
+          letter-spacing: 1px;
+          font-size 16px
+          color #fff
+      .con
+        margin 4px 0 0 14px
+        font-size 0
+        height 32px
+        .num
+          font-family: Impact;
+          letter-spacing: 2px;
+          color: #68f1ff;
+          font-size 26px
+        .dw
+          margin-left 4px
+          letter-spacing: 1px;
+          font-size 16px
+          color #fff
+      .change
+        width 100%
+        height 25px
+        line-height 25px
+        & span
+          font-size 14px
+          vertical-align middle
+          letter-spacing: 1px;
+        & img
+          margin 0 10px
+          vertical-align middle
+        .name
+          color #fff
+        .add
+          color #ff4a29
+        .cut
+          color #65d765
+    .pdLeft
+      padding-left 38px
+    .remB
+      border-bottom none

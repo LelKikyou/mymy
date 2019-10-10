@@ -1,0 +1,15 @@
+.criminalPrisonDetails
+  padding 0 20px 20px
+  .leftCon
+    float left
+    width 1390px
+    height 944px
+    .prison
+      width 100%
+      height 192px
+      overflow hidden
+  .rightCon
+    float left
+    margin-left 20px
+    width 470px;
+    height 944px

@@ -1,0 +1,100 @@
+.jbxxInfo
+  height 100%
+  .botNav
+    float left
+    width 200px;
+    height 100%
+    background-color: #042f43;
+    overflow: auto;
+    .botItem
+      height: 40px;
+      line-height: 40px;
+      padding-left: 20px;
+      cursor pointer
+      a
+        color: #ffffff
+        text-decoration: none
+    .anchorLink.anchorLink-active
+      background-color: #0d697a;
+  .botCon
+    margin-left 20px
+    float left
+    width 1660px
+    height 100%
+    background-color: #042f43;
+    padding: 0 40px 400px 30px
+    overflow: auto
+    &>div
+      overflow hidden
+    .picArea
+      overflow hidden
+      .picItem
+        float left
+        margin-right: 64px
+        width: 120px
+        img
+          width: 120px
+          height 150px
+        p
+          font-size: 16px
+          text-align: center
+          margin-top: 10px
+          line-height: 1
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;          
+    .tableArea
+      width 100%
+      overflow hidden
+      border-top: 1px solid #037d89;
+      border-left: 1px solid #037d89;
+      font-size: 16px
+      .row
+        float left
+        width 50%
+        height 30px
+        line-height 30px
+        .col-name
+          display inline-block
+          width 40%
+          height 100%
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          border-right: 1px solid #037d89;
+          border-bottom: 1px solid #037d89;
+          background-color: #044456;
+          padding-left: 20px
+        .col-value
+          display inline-block
+          width 60%
+          height 100%
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          border-right: 1px solid #037d89;
+          border-bottom: 1px solid #037d89;
+          padding-left: 20px
+    .titMag
+      margin: 20px 0
+    .titLong
+      width: 260px
+    .tableVertical
+      width: 100%
+      overflow: auto;
+      table
+        width: 100%
+        border-collapse: collapse;
+        border: 1px solid #037d89;
+      td, th
+        border: 1px solid #037d89;
+        padding: 0 20px
+        text-align: left
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      th
+        background-color: #044456;

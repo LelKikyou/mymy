@@ -1,0 +1,7 @@
+.peopleSupervisorsPage
+  width 100%
+  overflow hidden
+  .mid
+    float left
+    width 960px
+    margin-left 20px

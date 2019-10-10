@@ -1,0 +1,9 @@
+.criminalExecution
+  width 1920px
+  height 1080px
+  background url("../../assets/criminalExecution/bj.jpg") no-repeat
+  .content
+    width 100%
+    padding-top 20px
+    overflow hidden
+

@@ -1,0 +1,13 @@
+.aLegislationLeft
+  float left
+  margin-left 20px
+  width 440px
+  height 950px
+  background url("../../../../assets/adminLegislation/left.png") no-repeat
+  background-size 100% 100%
+  .leftTop
+    width 100%
+    height 258px
+  .leftMid
+    width 100%
+    height 598px

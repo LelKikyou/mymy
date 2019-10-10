@@ -1,0 +1,77 @@
+.criFilesTop
+  background url("../../../../../../assets/criminalExecution/biank.png") no-repeat
+  background-size 100% 100%
+  .summaryInfo
+    padding: 10px 20px 13px 18px;
+    height 100%
+    background-size 100% 100%
+    .summaryInfoCon
+      width 100%
+      height calc(100% - 36px)
+      margin-top:5px
+      margin-left: 1px
+      .avatar
+        float left
+        img 
+          width: 98px
+          height: 125px
+      .infoList
+        float left    
+        margin-left: 10px
+        overflow hidden
+        width:calc(100% - 126px);
+        .iLItemBot
+          line-height: 1
+          height: 100px
+          overflow: hidden;
+          .botList1
+            width: 200px
+          .botList2
+            width: 375px
+            margin-right: 5px
+          .botList3
+            width: 455px
+            margin-right: 5px 
+          .botList4
+            width: 295px
+            margin-right: 5px
+          .botList5
+            width: 370px
+          div
+            float left
+            height 100px
+            overflow: hidden;
+            p
+              margin-bottom: 24px;
+              font-size: 16px
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+        .iLItem
+          line-height: 1
+          overflow hidden
+          margin-bottom: 7px;
+          .name
+            color:#68f1ff
+            font-size: 16px
+            float left
+            b
+              font-size: 14px
+              color:#fff
+              margin: 0 10px
+              font-weight: normal 
+          .follow
+            width: 112px
+            height: 24px  
+            margin-right: 10px;
+            float right
+            font-size: 14px
+            line-height: 24px
+            text-align: center
+            cursor pointer
+            background url("../../../../../../assets/criminalExecution/add.png") no-repeat
+            .iconfont
+              color: #f4544c
+              font-size: 14px
+  
+  

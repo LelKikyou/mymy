@@ -1,0 +1,41 @@
+.right
+  .topBox
+    width 100%
+    height 568px
+    background url("../../../../../../assets/criminalExecution/right-up.png") no-repeat
+    background-size 100% 100%
+  .botBox
+    margin-top 20px
+    width 100%
+    height 356px
+    background url("../../../../../../assets/criminalExecution/right-lower.png") no-repeat
+    background-size 100% 100%
+    .content
+      position relative
+      width 100%
+      height calc(100% - 46px)
+      padding 26px 30px 0
+      .con
+        font-size 0
+        padding 0 10px
+        cursor pointer
+        .img
+          width 120px;
+          height 164px
+        .name
+          margin-top 4px
+          font-size 16px
+          color #14dceb
+        & div
+          width 100%
+          height 24px;
+          line-height 24px;
+          font-size 14px
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      .swiper-button-white
+        height 24px
+        &:focus
+          outline: 0
+

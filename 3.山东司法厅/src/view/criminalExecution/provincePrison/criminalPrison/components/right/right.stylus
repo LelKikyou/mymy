@@ -1,0 +1,67 @@
+.right
+  padding 0 16px
+  height 944px
+  background url("../../../../../../assets/criminalExecution/right.png") no-repeat
+  background-size 100% 100%
+  .top
+    margin 0 auto
+    width 100%
+    height 328px
+    overflow hidden
+    .content
+      width 100%
+      height calc(100% - 46px)
+      overflow hidden
+      .chart
+        height calc(100% - 44px)
+  .mid
+    width 100%
+    height 274px
+    overflow hidden
+    .content
+      width 100%
+      height calc(100% - 46px)
+      overflow hidden
+  .bot
+    width 100%
+    height 340px
+    overflow hidden
+    .content
+      width 100%
+      height calc(100% - 46px)
+      overflow hidden
+      padding-top 20px
+      .tit
+        background-color: #13919f;
+        & div
+          font-weight bold
+          font-size: 14px;
+          line-height: 32px;
+          letter-spacing: 1px;
+          color: #fff;
+      .con
+        width 100%
+        text-align center
+        overflow hidden
+        .criminalName
+          float left
+          width 100px
+        .prisonName
+          float left
+          width 206px
+        .eventType
+          float left
+          width 100px
+      .swiper-container
+        width 100%
+        height 230px
+        .swiper-slide div
+          font-size: 14px;
+          line-height: 32px;
+          letter-spacing: 1px;
+          color: #fff;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+

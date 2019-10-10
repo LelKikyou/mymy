@@ -1,0 +1,18 @@
+.aLegislationRight
+  float left
+  margin-left 20px
+  width 440px
+  height 950px
+  background url("../../../../assets/adminLegislation/right.png") no-repeat
+  background-size 100% 100%
+  .rightTopChart
+    width 100%
+    height 284px
+  .rightMidChart
+    width 100%
+    height 229px
+  .navChart
+    padding: 0 32px;
+  .rightBotChart
+    width 100%
+    height 254px

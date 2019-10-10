@@ -1,0 +1,9 @@
+.pubLSTopLeft
+    .chart
+        width: 45%;
+        float left
+        height: 273px;
+    .chart_2    
+        width: 55%;
+        float left
+        height: 273px;

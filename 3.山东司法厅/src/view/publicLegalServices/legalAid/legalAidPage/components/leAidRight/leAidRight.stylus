@@ -1,0 +1,16 @@
+.leAidRight
+  float left
+  margin-left 20px;
+  width 440px
+  height 950px
+  background url("../../../../../../assets/criminalExecution/right.png") no-repeat
+  background-size 100% 100%
+  .rightTop
+    width: 100%;
+    height: 284px;
+  .rightMid
+    width 100%
+    height: 228px;
+  .rightBot
+    width 100%
+    height: 298px;
