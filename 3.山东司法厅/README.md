@@ -47,24 +47,32 @@ npm run build
                  |---workBench  选择模块大平台页面
                  |---adminLegislation  行政立法
                  |---adminLawEnforcement  行政执法
+                                    |---LawEnforcementSupervision 行政执法监督
+                                                    |---LawEnforSupPage 行政执法监督主页面
+                                    |---administrativeArbitration 仲裁
+                                                    |---admtraArbitPage 仲裁主页面
+                                    |---reconsiderationLitigation 执法&复议
+                                                    |---recLitPage 执法&复议主页面
+                                    |---mandatoryPunishment 处罚&强制
+                                                    |---mandatoryPunishmentPage 处罚&强制主页面
                  |---criminalExecution  刑事执行
-                                     |---provincePrison 监狱
-                                                      |---criminalPrison 监狱主页面
-                                                      |---criminalPrisonDetails 监狱详情
-                                                      |---criminalInfo 罪犯信息
-                                                      |---criminalFiles 罪犯档案
+                                    |---provincePrison 监狱
+                                                    |---criminalPrison 监狱主页面
+                                                    |---criminalPrisonDetails 监狱详情
+                                                    |---criminalInfo 罪犯信息
+                                                    |---criminalFiles 罪犯档案
                  |---adminLegislation  行政立法
                  |---publicLegalServices  公共法律服务
-                                     |---peopleSupervisors 人员监督员
-                                                      |---peopleSupervisorsPage 人员监督员主页面
-                                     |---legalAid 法律援助
-                                                      |---legalAidPage 法律援助主页面
-                                     |---peopleMediation 人民调解
-                                                      |---peopleMediationPage 人民调解主页面
-                                     |---judicialExpertise 司法鉴定
-                                                      |---judicialExpertisePage 司法鉴定主页面
-                                     |---basLevLegServices 基层法律服务
-                                                      |---basLevLegServicesPage 基层法律服务主页面
+                                    |---peopleSupervisors 人员监督员
+                                                    |---peopleSupervisorsPage 人员监督员主页面
+                                    |---legalAid 法律援助
+                                                    |---legalAidPage 法律援助主页面
+                                    |---peopleMediation 人民调解
+                                                    |---peopleMediationPage 人民调解主页面
+                                    |---judicialExpertise 司法鉴定
+                                                    |---judicialExpertisePage 司法鉴定主页面
+                                    |---basLevLegServices 基层法律服务
+                                                    |---basLevLegServicesPage 基层法律服务主页面
     |---.browserslistrc  浏览器兼容配置
     |---.gitignore  忽略
     |---postcss.config  css兼容配置
